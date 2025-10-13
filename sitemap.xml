@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/2025/10/13/hello/</loc>
-    
-    <lastmod>2025-10-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aidecameron.github.io/about/index.html</loc>
     
     <lastmod>2025-10-13</lastmod>
@@ -119,13 +110,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://aidecameron.github.io/tags/test/</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -137,13 +121,6 @@
   
   <url>
     <loc>https://aidecameron.github.io/categories/ai-and-life/</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidecameron.github.io/categories/test/</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

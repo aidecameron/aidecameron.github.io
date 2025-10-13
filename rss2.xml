@@ -9,27 +9,8 @@
     <atom:link href="https://aidecameron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个灵活的中年人的个人博客，记录学习、阅读、实践，以及感悟。</description>
-    <pubDate>Mon, 13 Oct 2025 15:47:14 GMT</pubDate>
+    <pubDate>Sun, 12 Oct 2025 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>hello</title>
-      <link>https://aidecameron.github.io/2025/10/13/hello/</link>
-      <guid>https://aidecameron.github.io/2025/10/13/hello/</guid>
-      <pubDate>Mon, 13 Oct 2025 15:46:56 GMT</pubDate>
-      
-      
-      
-      
-      <category domain="https://aidecameron.github.io/categories/test/">test</category>
-      
-      
-      <category domain="https://aidecameron.github.io/tags/test/">test</category>
-      
-      
-      <comments>https://aidecameron.github.io/2025/10/13/hello/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>2025 年的 State of AI 报告告诉我们什么？</title>
