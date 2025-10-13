@@ -1,0 +1,19 @@
+/* 公告栏二维码样式 */
+.announce-qr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+.announce-qr .announce-text {
+  font-weight: 600;
+}
+.announce-qr img {
+  width: 180px;           /* 根据场景调 160–220px */
+  height: auto;
+  image-rendering: pixelated; /* 放大保持像素边缘清晰（PNG 可选） */
+  border-radius: 6px;
+}
+@media (max-width: 480px) {
+  .announce-qr img { width: 160px; }
+}

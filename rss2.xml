@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>爱的十日谈</title>
+    <link>https://aidecameron.github.io/</link>
+    
+    <atom:link href="https://aidecameron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>一个灵活的中年人的个人博客，记录学习、阅读、实践，以及感悟。</description>
+    <pubDate>Mon, 13 Oct 2025 15:47:14 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hello</title>
+      <link>https://aidecameron.github.io/2025/10/13/hello/</link>
+      <guid>https://aidecameron.github.io/2025/10/13/hello/</guid>
+      <pubDate>Mon, 13 Oct 2025 15:46:56 GMT</pubDate>
+      
+      
+      
+      
+      <category domain="https://aidecameron.github.io/categories/test/">test</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/test/">test</category>
+      
+      
+      <comments>https://aidecameron.github.io/2025/10/13/hello/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>2025 年的 State of AI 报告告诉我们什么？</title>
+      <link>https://aidecameron.github.io/2025/10/13/2025%20%E5%B9%B4%E7%9A%84%20State%20of%20AI%20%E6%8A%A5%E5%91%8A%E5%91%8A%E8%AF%89%E6%88%91%E4%BB%AC%E4%BB%80%E4%B9%88%EF%BC%9F/</link>
+      <guid>https://aidecameron.github.io/2025/10/13/2025%20%E5%B9%B4%E7%9A%84%20State%20of%20AI%20%E6%8A%A5%E5%91%8A%E5%91%8A%E8%AF%89%E6%88%91%E4%BB%AC%E4%BB%80%E4%B9%88%EF%BC%9F/</guid>
+      <pubDate>Sun, 12 Oct 2025 16:00:00 GMT</pubDate>
+      
+      <description>2025 年 10 月，Airstreet  Capital 发布了年度 AI 报告。一切看似美好，技术蓬勃发展，越来越多的企业开始采纳 AI。它更加融入人的日常生活。AI 产业链刺激万亿美元规模的投资，加剧了大洋两岸的技术竞赛。但 OpenAI 的创新乏力，以及它和“科技七子”的抱团互动，透露出泡沫破灭的隐忧。</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="2025-年的-State-of-AI-报告告诉我们什么？"><a href="#2025-年的-State-of-AI-报告告诉我们什么？" class="headerlink" title="2025 年的 State of AI 报告告诉我们什么？"></a>2025 年的 State of AI 报告告诉我们什么？</h1><p>一切看似美好，但是为什么 OpenAI 还在担心崩盘？</p><p>又到第四季度。咨询机构的报告如汗牛充栋。</p><p>如果你关心 AI，有一份报告不容错过。这就是每年的 State of AI 报告。</p><p>自2018年以来，该开放获取报告每年发布一次，旨在引发关于人工智能状况及其对未来意味着什么的知情对话。</p><p>今年的报告，由 Air Street 投资公司的合伙人 Nathan Benaich 制作。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350063_Pasted%20image%2020251013144438.png"></p><p>第八年发布的《2025人工智能报告》由行业和研究领域的诸多从业者进行审查。报告考虑了以下关键维度，包括新增的大规模人工智能使用情况调查部分：</p><ul><li><p>研究：技术突破及其能力。</p></li><li><p>行业：人工智能的商业应用领域及其商业影响。</p></li><li><p>政治：人工智能的监管、其经济影响以及不断演变的人工智能地缘政治。</p></li><li><p>安全：识别和减轻高能力未来人工智能系统可能对人类造成的灾难性风险。</p></li><li><p>调查：对 1200 名人工智能从业者及其人工智能使用模式进行的大规模的开放式访问调查。</p></li><li><p>预测：报告作者认为未来 12 个月会发生什么，以及对去年预测的绩效回顾，以保持可信度。</p></li></ul><p>省流，2025 年的 SoAI 报告，其中主要发现包括：</p><ul><li>OpenAI 在前沿领域保持着微弱的领先优势，但随着 Meta 将接力棒交给中国的 DeepSeek、Qwen 和 Kimi，竞争已经加剧。这些公司在推理和编码任务方面缩小了差距，使中国成为可靠的第二名。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350069_Pasted%20image%2020251013145336.png"></p><ul><li><p>推理定义了今年，前沿实验室将强化学习、基于规则的奖励和可验证的推理与新颖的环境相结合，创造了可以规划、反思、自我纠正并在越来越长的时间范围内工作的模型。</p></li><li><p>人工智能正在成为科学合作者，DeepMind 的 Co-Scientist 和斯坦福大学的 Virtual Lab 等系统自主生成、测试和验证假设。在生物学领域，Profluent 的 ProGen3 表明缩放定律现在也适用于蛋白质。</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350070_Pasted%20image%2020251013145546.png"></p><ul><li><p>结构化推理通过“行动链”规划进入物理世界，AI2 的 Molmo-Act 和谷歌的 Gemini Robotics 1.5 等具身人工智能系统开始在行动之前逐步推理。</p></li><li><p>商业吸引力急剧加速。根据 Ramp 和 Standard Metrics 的数据，现在有 44% 的美国企业为人工智能工具付费（2023 年为 5%），平均合同额达到 53 万美元，并且人工智能优先的初创公司比同行增长快 1.5 倍。</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350070_Pasted%20image%2020251013145944.png"></p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350070_Pasted%20image%2020251013145832.png"></p><ul><li>作者首次进行的人工智能从业者调查，有超过 1200 名受访者，显示 95% 的专业人士现在在工作或家庭中使用人工智能，76% 自掏腰包购买人工智能工具，并且大多数人报告生产力持续提高，这表明真正的采用已经成为主流。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350071_Pasted%20image%2020251013150107.png"></p><ul><li><p>人工智能的工业时代已经开始。像 “星际之门” 这样的多吉瓦数据中心标志着由美国、阿联酋和中国的主权基金支持的新一轮计算基础设施浪潮，电力供应正在成为新的制约因素。</p></li><li><p>人工智能政治进一步加强。美国倾向于“美国优先人工智能”，欧洲的《人工智能法案》步履蹒跚，中国扩大了其开放权重生态系统和国内芯片雄心。 安全研究进入了一个新的、更加务实的阶段。</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350071_Pasted%20image%2020251013150351.png"></p><ul><li><p>模型现在可以在监督下模仿对齐，从而引发了一场关于透明度与能力的辩论。与此同时，外部安全组织的预算比前沿实验室的每日支出还要少。</p></li><li><p>关于生存风险的辩论已经降温，让位于关于可靠性、网络韧性以及日益自主系统的长期治理的具体问题。</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350071_Pasted%20image%2020251013151314.png"></p><p>报告给了读者一个全景——人工智能在 2025 年蓬勃发展，融入了企业和人的日常生活，刺激万亿美元规模的投资，加剧了大洋两岸的技术竞赛。</p><p>虽然带来了一些安全性担忧，但似乎 AI 没有毁坏经济，也没有造成大规模失业。</p><p>然而，当我看到彭博社的这副图。饼的大小是市值，值得品味的是各自关系。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760352350071_Pasted%20image%2020251013151808.png"></p><p>OpenAI 是正在和其他人制造深度绑定，以对抗可能的泡沫崩盘，不是吗？</p><ul><li>考虑到 OpenAI 的创新力已显露疲态。</li><li>2025 的 AI 并未大规模改变传统企业，为他们带来营收增量。</li><li>新发布的Sora 2 让人想到更多的是深度伪造，而非世界模型。</li></ul><p>让我们拭目以待。</p>]]></content:encoded>
+      
+      
+      <category domain="https://aidecameron.github.io/categories/industry-news/">行业动态</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/ai-economy/">AI与经济</category>
+      
+      <category domain="https://aidecameron.github.io/tags/AI%E6%B3%A1%E6%B2%AB/">AI泡沫</category>
+      
+      
+    </item>
+    
+    <item>
+      <title>AI 穷三代，单反毁一生</title>
+      <link>https://aidecameron.github.io/2025/08/29/AI%20%E7%A9%B7%E4%B8%89%E4%BB%A3%EF%BC%8C%E5%8D%95%E5%8F%8D%E6%AF%81%E4%B8%80%E7%94%9F/</link>
+      <guid>https://aidecameron.github.io/2025/08/29/AI%20%E7%A9%B7%E4%B8%89%E4%BB%A3%EF%BC%8C%E5%8D%95%E5%8F%8D%E6%AF%81%E4%B8%80%E7%94%9F/</guid>
+      <pubDate>Thu, 28 Aug 2025 16:00:00 GMT</pubDate>
+      
+      <description>谁说 AI 不能拉动经济，氛围编码是烧钱的新火种。Anthropic Vibe Leaderboard 的打榜者向老一代发烧友致敬。</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><strong>谁说 AI 不能拉动经济，氛围编码是烧钱的新火种</strong></p><p>俗话说，Hifi 穷三代，单反毁一生。</p><p>这是发烧友在玩物丧志、人财两空后对世人的警醒。</p><p>钱来之不易，特别在经济逆周期的时候。</p><p>为了换得不多的情绪价值，一时脑热，为并非真实生产资料的藏品买单，的确不值。</p><p>大多数烧友，钱花出去后，换来音响、相机设备长期吃灰。不过，也有顶尖人物青史留名。</p><p>中国最顶尖的音响发烧友，是广东阳江的李积回。</p><p>他有另一个身份，“阳江十八子”集团的总经理，全国人大代表。“十八子菜刀”天下闻名，拍大蒜没问题。可李总的兴趣在音响设备、发烧唱片收集。“世界第一烧”，实至名归。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904067_Pasted%20image%2020250829134014.png"></p><p>李积回修建了三层楼、2000多平方米的私人“音响大观园”。其收藏包括JBL 4350、ATC SCM100、威卓胆机等顶级器材，总价值数亿元。软件方面，黑胶唱片超40万张、CD&#x2F;DVD超2万张，甚至曾一次性买下日本某图书馆的20万张LP。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904069_Pasted%20image%2020250829133750.png"></p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904070_Pasted%20image%2020250829134135.png"></p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904070_Pasted%20image%2020250829134432.png"></p><p>“独乐了不如众乐乐”，他创办“阳江十八子世界发烧音响博物馆”对公众开放，成为音响爱好者的“圣地”。</p><p>美国权威音响杂志《The Absolute Sound》（TAS）主编罗伯特·哈里（Robert Harley）曾专程拜访李积回，亲笔写下：“你是世界第一发烧友（The World’s Number One Audiophile）”。</p><p>再看玩相机的领域。</p><p>中国最有名的单反（相机）发烧友当属成都的金鹏飞。理由有三：</p><ul><li><p>官媒认证。新华社、央视《家有传家宝》、中国新闻网、中青在线等都对他做过专题报道，曝光度远超一般摄影爱好者。</p></li><li><p>700 多台藏品，自带“博物馆级”光环。金先生家里实际就是一个小型相机博物馆，从 1883 年的木箱相机到现代单反、徕卡、间谍机、手枪相机……数量与珍稀程度在国内民间收藏界数一数二。</p></li><li><p>终极情怀。金鹏飞与相机结缘 70 年。祖父留下“传家宝”相机。节衣缩食几十年，只为收相机。这些因素让“金大爷”成为媒体最爱讲的“励志+情怀”范本。</p></li></ul><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904071_Pasted%20image%2020250829134659.png"></p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904071_Pasted%20image%2020250829134807.png"></p><p>近年，在网络语境里，“中国单反大爷”成为群体现象。他们背着“长枪短炮”，在景区拍荷花、打鸟、拍美女。在这些人中，金大爷无疑最具代表性——他既有“大爷”身份，又有顶级藏品，还频繁登上主流媒体，堪称“单反发烧友第一人”。</p><p>2025年，愁着没处花钱的朋友们，喜迎发烧新物种：大模型 TOKEN。</p><p>烧掉的费用，并非用来研究全球气候变暖，而是一种新的游戏：用 AI 做“氛围编程”。</p><p>在氛围编程的神秘仪式下，发烧友动动嘴皮子，AI 就会生成功能千奇百怪的程序，据说从复杂的操作系统，到跑跑跳跳的 3A 游戏都可以。</p><p>不用懂代码，不用边代码，不用改代码。——只需对着麦克风念出需求，一切 AI 完成。</p><p>为了刺激群众相互鼓励，无良公司 Anthropic 公布了 Vibe Coding 发烧友的成绩排名。——文无第一，武无第二。排名依据是花钱的座次，而非成果是否先进。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760353904072_Pasted%20image%2020250829132406.png"></p><p>到8月底，榜首网友 24 天花费了 5 万美金。如果这背后是个人玩家，成绩绝对惊艳。</p><p>不到一个月，35万人民币，养一个小型创业公司的研发团队也许是足够。</p><p>新的经验也许是：<em><strong>AI 穷三代，发烧毁一生。</strong></em></p><p>细品，这措辞很有道理。</p><p>不论是烧音响，还是相机，尽管吃灰有浪费，最终还是留下了设备。人挂了以后，子孙后代还可以古董卖掉。因此，祸及当代，仅毁一生。</p><p>然而，氛围编程烧 TOKEN，大部分成果是垃圾代码，小部分成果是有趣的一次性程序。没有重量，很有可能遗失在硬盘里，随着设备老化而 bit rot 掉。人甚至懒得去摧毁。</p>]]></content:encoded>
+      
+      
+      <category domain="https://aidecameron.github.io/categories/ai-and-life/">AI与生活</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/">胡言乱语</category>
+      
+      <category domain="https://aidecameron.github.io/tags/ambient-coding/">氛围编程</category>
+      
+      
+    </item>
+    
+  </channel>
+</rss>

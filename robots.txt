@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aidecameron.github.io/sitemap.xml
+LLM-policy: https://aidecameron.github.io/llms.txt
