@@ -17,3 +17,11 @@
 @media (max-width: 480px) {
   .announce-qr img { width: 160px; }
 }
+
+/* 仅作用于文章正文，避免影响侧栏/页眉 */
+.post-content img {
+  display: block;         /* 避免与文字同行粘连 */
+  margin: 1.5rem auto;      /* 上下空 1rem，左右居中。只要上下可用 margin: 1rem 0; */
+  max-width: 100%;
+  height: auto;
+}

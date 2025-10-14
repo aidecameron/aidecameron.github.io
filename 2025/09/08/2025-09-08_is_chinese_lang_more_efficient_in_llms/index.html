@@ -1,0 +1,814 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>研究 - 用中文驱动 LLM 是否效率更高 | 爱的十日谈</title><meta name="author" content="爱的十日谈"><meta name="copyright" content="爱的十日谈"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="汉字比字母文字更为简洁，分词技术曾经限制了中文的信息密度优势。专家用“错误的论据”得出了“正确的结论”。用中文驱动 DeepSeek 等国产大模型有助于低碳，对 ChatGPT 而言则不然。本文做了量化分析。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="研究 - 用中文驱动 LLM 是否效率更高">
+<meta property="og:url" content="https://aidecameron.github.io/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/index.html">
+<meta property="og:site_name" content="爱的十日谈">
+<meta property="og:description" content="汉字比字母文字更为简洁，分词技术曾经限制了中文的信息密度优势。专家用“错误的论据”得出了“正确的结论”。用中文驱动 DeepSeek 等国产大模型有助于低碳，对 ChatGPT 而言则不然。本文做了量化分析。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg">
+<meta property="article:published_time" content="2025-09-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-13T16:00:00.000Z">
+<meta property="article:author" content="爱的十日谈">
+<meta property="article:tag" content="LLM技术">
+<meta property="article:tag" content="国产大模型">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "研究 - 用中文驱动 LLM 是否效率更高",
+  "url": "https://aidecameron.github.io/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/",
+  "image": "https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg",
+  "datePublished": "2025-09-07T16:00:00.000Z",
+  "dateModified": "2025-10-13T16:00:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "JayZ",
+      "url": "https://aidecameron.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760272750732_chat.png"><link rel="canonical" href="https://aidecameron.github.io/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 爱的十日谈","link":"链接: ","source":"来源: 爱的十日谈","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '研究 - 用中文驱动 LLM 是否效率更高',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="爱的十日谈" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="爱的十日谈" type="application/rss+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="/css/center-circle.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 关键字</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 主题</span></a></div><div class="menus_item"><a class="site-page" href="/attribute/"><i class="fa-fw fas fa-coffee"></i><span> 感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760414324906_199276e64269f.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a><a class="nav-page-title" href="/"><span class="site-name">研究 - 用中文驱动 LLM 是否效率更高</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 关键字</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 主题</span></a></div><div class="menus_item"><a class="site-page" href="/attribute/"><i class="fa-fw fas fa-coffee"></i><span> 感谢</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">研究 - 用中文驱动 LLM 是否效率更高</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-07T16:00:00.000Z" title="发表于 2025-09-08 00:00:00">2025-09-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-13T16:00:00.000Z" title="更新于 2025-10-14 00:00:00">2025-10-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A0%94%E7%A9%B6/">实践与研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>近期，一朋友接了领导的研究任务，主题是中文之于大语言模型的领先性。</p>
+<p>缘起是 2025 年 1 月，DeepSeek 的新版本惊艳了 AI 业界，中文大模型一夜封神。之后，Qwen 3、K2 等模型的屡次屠榜，证明国人强于数学与 AI 工程学并非偶然。</p>
+<p>除了对中国 AI 科研人员的艳羡和赞美之外，群众不禁追问：既然汉字可考历史超过3500年，相比拉丁文字，中文是否有表达信息的内生优势？DeepSeek 等模型的成功，是否很大程度上得益于在预训练阶段融入了中文字符？</p>
+<p>若将“中文 AI 优越论”，归因于历史必然、内在必然，无疑让华语互联网文化自信又增。</p>
+<h2 id="汉字是否更为简洁"><a href="#汉字是否更为简洁" class="headerlink" title="汉字是否更为简洁"></a>汉字是否更为简洁</h2><p>2025年2月，新加坡《南华早报》引电信业意见领袖项立刚的论述说，“汉字以最小的成本实现最大信息传递。作为一种高效的信息编码，中文在人工智能处理中极大地提高了效率并降低了成本。”</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698395_Pasted%20image%2020250908122552.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>知名学者张维为在《这就是中国》第274期圆桌讨论中，用他在联合国的工作经历举例。</p>
+<p>“《联合国宪章》，有六种官方语言版本，中文是最薄的。道理非常简单，因为中文核心汉字只有3500个左右，掌握后就可以阅读所有报刊，而读《纽约时报》至少需要掌握2万个英文单词，否则会读得非常累。”</p>
+<p>专家们的看法，汉字字符是中文信息密度大于英文的根因之一。</p>
+<p>计算机处理英文，最小信息单元是字母；处理中文，最小信息单元是单字（而非偏旁部首，偏旁部首不单独编码）。除却缩写，字母本身并不承载意义，单个汉字却承载意义。因此，汉字在计算机中编码效率高于字母，有其基本逻辑。</p>
+<p>用计算机指令类比，英文相当于 RISC 体系，汉语则为 CISC 体系。</p>
+<p>网络上关于“谁表述更简洁，英文还是中文？”的话题，众说纷纭。汉语以意合，英语以形合，根基不同，长短不一。</p>
+<p>双方都有生动的例子。但胜负断言缺乏量化统计依据。</p>
+<p>至于《联合国宪章》，1945年的初始版本，英文、法文30页，中文28页，俄文32页。却不能作为汉语简约的可靠论据。字体大小，排版风格皆能决定文本厚薄。英文单词占位较宽，体积大过汉字字符，在比较中颇为吃亏。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698399_Pasted%20image%2020250908123842.png" style="max-width:600px; width:100%; height:auto;">
+
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698399_Pasted%20image%2020250908123243.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>在最常用的计算机信息存储标准 UTF-8 编码下，一个英文字母占一个8位字节，而一个汉字占2~4个字节不等。单个汉字相对单个英文字母并不占空间优势。</p>
+<p>表达相近意义的双语文本，在同一套 UTF-8 编码下，消耗的存储容量，谁多谁少？其实很容易以书籍素材为基础，肩并肩量化比较。</p>
+<p>我做了三类计数。</p>
+<ul>
+<li>第一，比较中文名著及其英文译文，总体来看，英文字符消耗量为中文3倍以上。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th>源语言</th>
+<th>目标语言</th>
+<th>原文字符数</th>
+<th>译文字符数</th>
+<th>译&#x2F;原比例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>鲁迅全集</td>
+<td>中文</td>
+<td>英文</td>
+<td>5873812</td>
+<td>16880074</td>
+<td>2.87</td>
+</tr>
+<tr>
+<td>毛泽东选集</td>
+<td>中文</td>
+<td>英文</td>
+<td>1891939</td>
+<td>6230272</td>
+<td>3.29</td>
+</tr>
+<tr>
+<td>三国演义</td>
+<td>中文</td>
+<td>英文</td>
+<td>658034</td>
+<td>2530469</td>
+<td>3.85</td>
+</tr>
+<tr>
+<td>水浒传</td>
+<td>中文</td>
+<td>英文</td>
+<td>853834</td>
+<td>3074865</td>
+<td>3.6</td>
+</tr>
+<tr>
+<td>西游记</td>
+<td>中文</td>
+<td>英文</td>
+<td>815930</td>
+<td>2854097</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>红楼梦</td>
+<td>中文</td>
+<td>英文</td>
+<td>1120253</td>
+<td>3604908</td>
+<td>3.22</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>11213802</strong></td>
+<td><strong>35174685</strong></td>
+<td>3.22</td>
+</tr>
+</tbody></table>
+<ul>
+<li>第二，英文非小说类畅销书，及其中文译文。英文字符消耗量约为中文2.5倍。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th>源语言</th>
+<th>目标语言</th>
+<th>原文字符数</th>
+<th>译文字符数</th>
+<th>原&#x2F;译比例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Empire of AI</td>
+<td>英文</td>
+<td>中文</td>
+<td>941609</td>
+<td>407678</td>
+<td>2.31</td>
+</tr>
+<tr>
+<td>The Art of Asking</td>
+<td>英文</td>
+<td>中文</td>
+<td>90134</td>
+<td>33032</td>
+<td>2.73</td>
+</tr>
+<tr>
+<td>Brave New Words</td>
+<td>英文</td>
+<td>中文</td>
+<td>322667</td>
+<td>120429</td>
+<td>2.68</td>
+</tr>
+<tr>
+<td>The Creative’s Mind</td>
+<td>英文</td>
+<td>中文</td>
+<td>353149</td>
+<td>135431</td>
+<td>2.61</td>
+</tr>
+<tr>
+<td>Sketch Your Mind</td>
+<td>英文</td>
+<td>中文</td>
+<td>230130</td>
+<td>97376</td>
+<td>2.36</td>
+</tr>
+<tr>
+<td>Blood in the Machine</td>
+<td>英文</td>
+<td>中文</td>
+<td>784294</td>
+<td>305211</td>
+<td>2.57</td>
+</tr>
+<tr>
+<td>Emergence</td>
+<td>英文</td>
+<td>中文</td>
+<td>463661</td>
+<td>171274</td>
+<td>2.71</td>
+</tr>
+<tr>
+<td>The Socratic Method Today</td>
+<td>英文</td>
+<td>中文</td>
+<td>572560</td>
+<td>225475</td>
+<td>2.54</td>
+</tr>
+<tr>
+<td>Guide to Analytic Thinking</td>
+<td>英文</td>
+<td>中文</td>
+<td>72681</td>
+<td>25373</td>
+<td>2.86</td>
+</tr>
+<tr>
+<td>Selfhood in the Digital Age</td>
+<td>英文</td>
+<td>中文</td>
+<td>515779</td>
+<td>195126</td>
+<td>2.64</td>
+</tr>
+<tr>
+<td>The Neural Mind</td>
+<td>英文</td>
+<td>中文</td>
+<td>794381</td>
+<td>327877</td>
+<td>2.42</td>
+</tr>
+<tr>
+<td>Breaking Things at Work</td>
+<td>英文</td>
+<td>中文</td>
+<td>275300</td>
+<td>109307</td>
+<td>2.52</td>
+</tr>
+<tr>
+<td>The AI Con</td>
+<td>英文</td>
+<td>中文</td>
+<td>509834</td>
+<td>238019</td>
+<td>2.14</td>
+</tr>
+<tr>
+<td>The Enigma of Reason</td>
+<td>英文</td>
+<td>中文</td>
+<td>717349</td>
+<td>279940</td>
+<td>2.56</td>
+</tr>
+<tr>
+<td>Dead Money</td>
+<td>英文</td>
+<td>中文</td>
+<td>566693</td>
+<td>232112</td>
+<td>2.44</td>
+</tr>
+<tr>
+<td>Not a Kinesthetic Learner</td>
+<td>英文</td>
+<td>中文</td>
+<td>510630</td>
+<td>189561</td>
+<td>2.69</td>
+</tr>
+<tr>
+<td>The Thinker’s Guide</td>
+<td>英文</td>
+<td>中文</td>
+<td>173563</td>
+<td>61454</td>
+<td>2.82</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>7894414</strong></td>
+<td><strong>3154675</strong></td>
+<td><strong>2.5</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li>第三，最近多期《自然》杂志，原文档为英文。其字符消耗量为中文2.2倍。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th>源语言</th>
+<th>目标语言</th>
+<th>原文字符数</th>
+<th>译文字符数</th>
+<th>原&#x2F;译比例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nature [Sun, 27 Jul 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1751308</td>
+<td>801169</td>
+<td>2.19</td>
+</tr>
+<tr>
+<td>Nature [Sat, 30 Aug 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1866253</td>
+<td>862091</td>
+<td>2.16</td>
+</tr>
+<tr>
+<td>Nature [Tue, 12 Aug 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1960390</td>
+<td>871506</td>
+<td>2.25</td>
+</tr>
+<tr>
+<td>Nature [Sun, 29 Jun 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1750108</td>
+<td>811688</td>
+<td>2.16</td>
+</tr>
+<tr>
+<td>Nature [Sat, 23 Aug 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1483214</td>
+<td>678719</td>
+<td>2.19</td>
+</tr>
+<tr>
+<td>Nature [Sat, 19 Jul 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1434444</td>
+<td>658810</td>
+<td>2.18</td>
+</tr>
+<tr>
+<td>Nature [Sat, 16 Aug 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>1905335</td>
+<td>860145</td>
+<td>2.22</td>
+</tr>
+<tr>
+<td>Nature [Sat, 06 Sep 2025]</td>
+<td>英文</td>
+<td>中文</td>
+<td>2148336</td>
+<td>969359</td>
+<td>2.22</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>14299388</strong></td>
+<td><strong>6513487</strong></td>
+<td><strong>2.2</strong></td>
+</tr>
+</tbody></table>
+<p>为统计一致性，以上翻译均为同一 LLM 引擎完成。</p>
+<p>从结果看，汉字字符整体效率高于英文字母。对不同领域的文本，体现有差异。</p>
+<p>中文名著，信息密度最高，原因有可能是四大名著夹杂少许文言文表述，英文翻译用掉更多文字。然而，《毛泽东选集》依然平均一个汉字耗掉 3.29 个英文字母，超过《红楼梦》（3.22）。</p>
+<p>英文畅销书与机翻中文对照，字母、汉字所占用空间比率为 2.5，符合项立刚老师的逻辑。</p>
+<p>对于科学文章属性的《自然》杂志，不少科学名词用英文缩写，而译为中文名称变长。因此，汉字的信息简约性优势略微变弱，但仍保持 2.2 倍的空间比率优势。</p>
+<h2 id="分词技术曾经的“偏见”"><a href="#分词技术曾经的“偏见”" class="headerlink" title="分词技术曾经的“偏见”"></a>分词技术曾经的“偏见”</h2><p>故事本可以在这里结束。但 SemiAnalysis 的创始人 Dylan Patel 持不同意见。</p>
+<p>Dylan Patel 何方神圣？他是如今 AI 和半导体领域最受关注的独立分析师之一。</p>
+<p>Dylan 在 2023 年 7 月29 日的推文中讲：LLM 推理成本因语言不同而差异巨大，对于 GPT-4 和大多数其他常见 LLM 来说。英语是最便宜的。中文是英语的两倍。其他语言，如缅甸语，差距可达夸张的 15 倍。其原因是，大语言模型的”分词“机制，表达同一个意思，英语占用更少数量的词元（Token）。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698399_Pasted%20image%2020250908125518.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>Dylan 的论述源于一篇来自牛津大学的论文“Language Model Tokenizers Introduce Unfairness Between Languages”。</p>
+<p>仔细读来，该论文并无彰显英语优越感之意，反而指出了 OpenAI 等厂商的大模型因分词技术原因，对非英语语种带来不公平。</p>
+<p>我上面统计比较一本书的多语版本，“英文字符数” vs. “中文字符数”，除影响计算机存储空间外，于大语言模型并无意义。</p>
+<p>原因是，在 LLM 内，处理的最小信息单元，并非单个英文字母，亦非汉字，而是分词器（Tokenizer）产生的词元（Token）。</p>
+<p>准确地讲，模型用来推理的数据，是词元对应的“高维嵌入式表示”（Embedding）。</p>
+<p>“嵌入表示”涉及到大模型为何能推理出有意义文本的根本原因，在此不加冗述。但“词元”很容易理解。</p>
+<p>根据 OpenAI 和其他主流模型服务商的 BPE 分词算法，在大量语料中相邻的、共现频率高的字母和符号会被聚集在一起，像雾气凝聚为露珠，形成一个个“词元”。</p>
+<p>据实际观察，很多英文单词，频繁亮相的短语会被认为是单一词元。</p>
+<p>OpenAI 提供了网页工具，演示了如何分词。<a target="_blank" rel="noopener external nofollow noreferrer" href="https://platform.openai.com/tokenizer">https://platform.openai.com/tokenizer</a><br>不仅对分词的结果数量进行了统计，而且用不同的颜色区分展示了具体结果。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698399_Pasted%20image%2020250907222150.png" style="max-width:600px; width:100%; height:auto;">
+以上图中，输入框区域，用户可以键入测试文本。上面的句子来自于《财富》杂志9月3日的公开新闻。总共 413 个字符，分词器将其划为 107 个词元。
+
+<p>数字、标点的分词方式较为有趣，“500”、“30”被视为一个词元，而独立的单个数字则被分为单个词元。一般来说，标点被分为单个词元，但临近的标点，被合并为一个词元，如“%,”。</p>
+<p>界面提供了三代GPT模型的比较，对英文而言，GPT-5 的分词器没有提供，但 GPT-4o及之前的三代模型，分词方式没有变化。</p>
+<p>这个演示内容也适合于中文。以下测试内容摘自《上海证券报》新闻。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698400_Pasted%20image%2020250907224213.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>值得关注的是，同一段话，不同代次的 GPT 模型对中文的分词效率不同。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698400_Pasted%20image%2020250907224911.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>同样的 145 个中文字符（汉字+标点），GPT-3 消耗了 307 个 词元，GPT-3.5&#x2F;4 消耗 169 个词元，而现行的 GPT-4o 仅消耗 108 个词元。</p>
+<p>处理中文，GPT-3 的词元占用量是汉字字数的约两倍。GPT-3.5&#x2F;4 基本上是一个字一个词元。</p>
+<p>而 GPT-4o，从结果演示来看，它把汉字组成的常用词进行了一些合并。用单个词元表示中文一个词，类似于英文单词的处理方式。因此，GPT-4o 处理中文，词元消耗量大幅度下降。</p>
+<p>Dylan Patel 和 牛津研究人员批评的是 2023 年 7月的 GPT-4。可见，OpenAI 的研发人员聆听了社区的声音，已改进了中文等语言的分词效率。</p>
+<p>随着 OpenAI 的悔改，“中文 Token 数消耗量是英文的两倍”，这个现象可封存为历史。</p>
+<h2 id="固定“意义”下，哪种语言更优？"><a href="#固定“意义”下，哪种语言更优？" class="headerlink" title="固定“意义”下，哪种语言更优？"></a>固定“意义”下，哪种语言更优？</h2><p>信心值重新加满，回到那个根本问题，大模型中，传递同样信息，用哪种语言更有效率？</p>
+<p>表达同样意义的一段文本，哪种语言文字的词元消耗更少，中文，还是英文？</p>
+<p>要做相同含义的多语种内容，做大模型分词的效率比较，首先要找到权威的对照翻译文本。</p>
+<p>如果找一段英文，机翻为中文，比较两者，不一定准确客观。因为机翻的性能有限，不同模型，也有简洁或者啰嗦的各自特点。</p>
+<p>如果以文学作品为依据，从母语版本到译本，无论任何名家翻译，都有“信、达、雅”程度的不确定性。翻译专家也难免夹带私货，遑论机翻。</p>
+<p>一个优质素材是联合国的官方网站。</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.un.org/">https://www.un.org/</a> 提供了六种语言的对照版本。联合国是多边的舞台，价值观的交集，信息解读相对中立。对照的公文和新闻发布，内容可基本做到“不杂不漏”。</p>
+<p>我们从 UN 网站的“支持可持续发展与气候行动”页面摘取一段引言，用作“苹果对苹果”的实验。<br>英文网址在：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.un.org/en/our-work/support-sustainable-development-and-climate-action">https://www.un.org/en/our-work/support-sustainable-development-and-climate-action</a><br>中文网址在：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.un.org/zh/our-work/support-sustainable-development-and-climate-action">https://www.un.org/zh/our-work/support-sustainable-development-and-climate-action</a></p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698400_Pasted%20image%2020250907230058.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>结果表明，在同一意义表达的限定下，中文使用的计算机字符数仅为英文的 1&#x2F;3 到 1&#x2F;4 ，并不意外，这是汉字之于英文字母的信息编码密度优势。</p>
+<p>而折算为 GPT-4o 模型下的词元，结果有所不同。表达同一意义，英文使用了 182 个词元，而中文用了 197 个词元。英文反而有微弱优势。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698400_Pasted%20image%2020250907230337.png" style="max-width:600px; width:100%; height:auto;">
+中文用户倒是不要气馁。相对其他 4 种联合国语言，中文在次新版 GPT 模型下的分词效率优势非常明显，与榜首接近。
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>英文</th>
+<th>中文</th>
+<th>阿拉伯语</th>
+<th>法语</th>
+<th>俄语</th>
+<th>西语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>词元数</td>
+<td>182</td>
+<td>197</td>
+<td>235</td>
+<td>245</td>
+<td>269</td>
+<td>258</td>
+</tr>
+<tr>
+<td>字符数</td>
+<td>1024</td>
+<td>276</td>
+<td>821</td>
+<td>1220</td>
+<td>1108</td>
+<td>1300</td>
+</tr>
+</tbody></table>
+<p>这是 OpenAI 的分词器效果，我们进而追问，以 DeepSeek 为代表的国产大语言模型，在分词的问题上表现如何。</p>
+<p>好在，DeepSeek、Kimi、Qwen、智谱等模型的分词器皆在 Huggingface 开源。OpenAI 也提供了 ticktoken Python 库，作为线下分词研究工具。</p>
+<p>我略花了一点时间，vibe 了一个小程序，比较了上述文本在各个模型下的分词统计。结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>模型名</th>
+<th>字符长度</th>
+<th>分词长度</th>
+<th>压缩比</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gpt-4o</td>
+<td>276</td>
+<td>197</td>
+<td>1.40</td>
+</tr>
+<tr>
+<td>gpt-4&#x2F;gpt-3.5</td>
+<td>276</td>
+<td>330</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>gpt-3</td>
+<td>276</td>
+<td>594</td>
+<td>0.46</td>
+</tr>
+<tr>
+<td>deepseek-v3.1</td>
+<td>276</td>
+<td>140</td>
+<td>1.97</td>
+</tr>
+<tr>
+<td>kimi-k2</td>
+<td>276</td>
+<td>133</td>
+<td>2.08</td>
+</tr>
+<tr>
+<td>qwen3</td>
+<td>276</td>
+<td>153</td>
+<td>1.80</td>
+</tr>
+<tr>
+<td>glm-4.5</td>
+<td>276</td>
+<td>142</td>
+<td>1.94</td>
+</tr>
+</tbody></table>
+<p>拾回自信的时刻终于到来，四大国产模型处理中文分词的效率碾压 OpenAI。同样的 276 个汉字，它们的分词长度在 133 到 153 之间，K2 模型位居效率第一。</p>
+<p>国产模型不仅大幅领先 GPT-4o 处理汉字的 197，而且超过了它对英文母语的处理（182）。</p>
+<p>当然， OpenAI 的 SOTA，GPT-5 的分词器尚未公开。</p>
+<p>然而，一段仅276汉字（1024个英文字母）的信息，不具代表性和普遍性，并不能说明中文和英文的对比效率。</p>
+<p>于是我抓取了 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://un.org/">http://un.org</a> 下的主要内容，萃取文本，去除标签和链接。大概有51个页面，包括联合国机构描述、宪章、国际法庭、人权宣言、重要事件描述等重要文件。这些页面都有严格的六种语言对照。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698401_Pasted%20image%2020250908105318.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>萃取结果数据，每条皆以人工仔细对比，以免遗漏错位。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698401_Pasted%20image%2020250908131116.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>最终，输入源变成英文305064个字符，而中文为91089个字符。用它们来做信息效率研究应该能体现公平。</p>
+<p>运行结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>模型名</th>
+<th>语言类型</th>
+<th>字符数</th>
+<th>分词数</th>
+<th>压缩比</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gpt-4o</td>
+<td>英文</td>
+<td>305064</td>
+<td>62458</td>
+<td>4.88</td>
+</tr>
+<tr>
+<td>gpt-4&#x2F;gpt-3.5</td>
+<td>英文</td>
+<td>305064</td>
+<td>62984</td>
+<td>4.84</td>
+</tr>
+<tr>
+<td>gpt-3</td>
+<td>英文</td>
+<td>305064</td>
+<td>68966</td>
+<td>4.42</td>
+</tr>
+<tr>
+<td>deepseek-v3.1</td>
+<td>英文</td>
+<td>305064</td>
+<td>62448</td>
+<td>4.89</td>
+</tr>
+<tr>
+<td>kimi-k2</td>
+<td>英文</td>
+<td>305064</td>
+<td>62921</td>
+<td>4.85</td>
+</tr>
+<tr>
+<td>qwen3</td>
+<td>英文</td>
+<td>305064</td>
+<td>65847</td>
+<td>4.63</td>
+</tr>
+<tr>
+<td>glm-4.5</td>
+<td>英文</td>
+<td>305064</td>
+<td>62928</td>
+<td>4.85</td>
+</tr>
+<tr>
+<td>gpt-4o</td>
+<td>中文</td>
+<td>91089</td>
+<td>65692</td>
+<td>1.39</td>
+</tr>
+<tr>
+<td>gpt-4&#x2F;gpt-3.5</td>
+<td>中文</td>
+<td>91089</td>
+<td>96029</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>gpt-3</td>
+<td>中文</td>
+<td>91089</td>
+<td>182237</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>deepseek-v3.1</td>
+<td>中文</td>
+<td>91089</td>
+<td>51466</td>
+<td>1.77</td>
+</tr>
+<tr>
+<td>kimi-k2</td>
+<td>中文</td>
+<td>91089</td>
+<td>49511</td>
+<td>1.84</td>
+</tr>
+<tr>
+<td>qwen3</td>
+<td>中文</td>
+<td>91089</td>
+<td>56965</td>
+<td>1.60</td>
+</tr>
+<tr>
+<td>glm-4.5</td>
+<td>中文</td>
+<td>91089</td>
+<td>52456</td>
+<td>1.74</td>
+</tr>
+</tbody></table>
+<p>可见，GPT-4o 表达这些联合国官方文本，用的英文分词数仍然略多于中文（62458 &lt; 65692）。但所有的中国开源模型效率都高过 GPT-4o，尤以 K2 为甚。</p>
+<p>以下是一个更直观的图像展示，以 GPT-4o 为基准。我们可以读出，DeepSeek V3.1、K2、Qwen 3、GLM-4.5 这些模型处理中文的效率普遍比 GPT-4o 高出 10% 以上。处理英文方面，DeepSeek 与 GPT 效率相当，其他模型略弱，但差距微小。</p>
+<p>更重要的发现是，在 DeepSeek V3.1、K2、Qwen 3、GLM-4.5 这些模型之下，中文词元的整体信息密度全部高于英文，至少 15%。</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698401_Pasted%20image%2020250908103833.png" style="max-width:600px; width:100%; height:auto;">
+
+
+<p>通过阅读技术报告可知，Qwen 等模型皆在 BBPE 分词算法上作了优化，这是它们中文分词效率更高的原因。</p>
+<h2 id="结论：中国大模型-汉语-低碳"><a href="#结论：中国大模型-汉语-低碳" class="headerlink" title="结论：中国大模型 + 汉语 &#x3D; 低碳"></a>结论：中国大模型 + 汉语 &#x3D; 低碳</h2><p>折腾了半天，有何结论？</p>
+<ol>
+<li>GPT 较新的模型，中文和英文的信息表达效率已差距不大，仍略弱。</li>
+<li>在国产模型下，中文信息表达效率已超出英文 15%~20%。</li>
+</ol>
+<p>也就是说，我们用 DeepSeek 这些国产大模型，解决同样的问题，其他变数固定的情况下，用中文对话，至少节省 1 成以上的 Token。</p>
+<p>绕了一圈，张维为、项立刚老师的论断，部分成立。至少是，在使用最新的主流国产开源大模型这一条件下成立。</p>
+<p>中文的 AI 优势，并不能只靠老祖宗的恩赐，国产大模型让中文内生的高效信息表达得以实现。</p>
+<p>这有何意义？</p>
+<p>中文的碳足迹更轻，更少的词元消耗，更为环保，会有利于碳中和。</p>
+<p>根据联合国教科文组织的研究，每条大模型提示词的运行平均消耗 0.34 瓦时的电量，大概相当于 0.04 克二氧化碳。</p>
+<p>这看起来微不足道，但每天全球有超过 10 亿人在同时使用生成式人工智能。</p>
+<p>累积起来每年高达 310 吉瓦时，相当于一个低收入非洲国家超过 300 万人每年的电力消耗。</p>
+<p>如果在聊天过程中省掉 10% 的词元，至少能提供惠及 30 万非洲群众的电力！</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760402698401_Pasted%20image%2020250908121142.png" style="max-width:600px; width:100%; height:auto;">
+
+<p>为了一个绿色的地球，我们应号召全球科技界学习中文，并使用中国产的大语言模型。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><p>Alibaba. 2025. “Qwen3 Technical Report.”</p>
+</li>
+<li><p>DeepSeek-AI, Aixin Liu, Bei Feng, Bing Xue, Bingxuan Wang, Bochao Wu, Chengda Lu, et al. 2024. “DeepSeek-V3 Technical Report.” arXiv. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://doi.org/10.48550/arXiv.2412.19437">https://doi.org/10.48550/arXiv.2412.19437</a>.</p>
+</li>
+<li><p>Dylan Patel. 2023. “The Cost of LLM Inference Varies Hugely Based on the Language for GPT-4 and Most Other Common LLMs. English Is the Cheapest. Chinese Is 2x English. Languages like Shan + Burmese Are 15x More Expensive. This Is Mostly Because of How Tokenizers Work so Need to Output More Tokens Https:&#x2F;&#x2F;T.Co&#x2F;Y7De09pb4w.” Tweet. <em>Twitter</em>. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://x.com/dylan522p/status/1685038026228129796">https://x.com/dylan522p/status/1685038026228129796</a>.</p>
+</li>
+<li><p>Petrov, Aleksandar, Emanuele La Malfa, Philip H. S. Torr, and Adel Bibi. 2023. “Language Model Tokenizers Introduce Unfairness Between Languages.” arXiv. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://doi.org/10.48550/arXiv.2305.15425">https://doi.org/10.48550/arXiv.2305.15425</a>.</p>
+</li>
+<li><p>“Strokes of Genius: Why Chinese Lessons May Make DeepSeek’s AI Smarter.” 2025. South China Morning Post. February 14, 2025. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.scmp.com/news/china/science/article/3298555/strokes-genius-why-deepseeks-ai-edge-may-come-its-chinese-lessons">https://www.scmp.com/news/china/science/article/3298555/strokes-genius-why-deepseeks-ai-edge-may-come-its-chinese-lessons</a>.</p>
+</li>
+<li><p>Team, Kimi, Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, et al. 2025. “Kimi K2: Open Agentic Intelligence.” arXiv. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://doi.org/10.48550/arXiv.2507.20534">https://doi.org/10.48550/arXiv.2507.20534</a>.</p>
+</li>
+<li><p>UN. 1945. “联合国宪章全语言初始版本.”</p>
+</li>
+<li><p>UNESCO. 2025. “Smarter, Smaller, Stronger: Resource-Efficient Generative AI &amp; the Future of Digital Transformation.” UNESCO. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unesdoc.unesco.org/ark:/48223/pf0000394521">https://unesdoc.unesco.org/ark:/48223/pf0000394521</a>.</p>
+</li>
+<li><p>张维为. 2025. “张维为《这就是中国》第274期| DeepSeek震撼-张维为、汪涛.” March 2025. <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.guancha.cn/ZhangWeiWei/2025_03_16_768588_s.shtml">https://www.guancha.cn/ZhangWeiWei/2025_03_16_768588_s.shtml</a>.</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://aidecameron.github.io">JayZ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://mp.weixin.qq.com/s/lesPJtxI0gdi8U_gJ6giHA">https://mp.weixin.qq.com/s/lesPJtxI0gdi8U_gJ6giHA</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">此文章版权归 ai的十日谈 所有，如有转载，请注明来自原作者</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/llm/">LLM技术</a><a class="post-meta__tags" href="/tags/chinese-llm/">国产大模型</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/09/29/2025-09-29_hot_for_real/" title="为了流量，他们选择真实和特立独行"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">为了流量，他们选择真实和特立独行</div></div><div class="info-2"><div class="info-item-1">流量要回归本质；因为低质，AI 已经成为流量毒药</div></div></div></a><a class="pagination-related" href="/2025/08/29/2025-08-29_vibe_coding_is_a_hifi_thing/" title="AI 穷三代，单反毁一生"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI 穷三代，单反毁一生</div></div><div class="info-2"><div class="info-item-1">谁说 AI 不能拉动经济，氛围编码是烧钱的新火种。Anthropic Vibe Leaderboard 的打榜者向老一代发烧友致敬。</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/09/29/2025-09-29_hot_for_real/" title="为了流量，他们选择真实和特立独行"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-29</div><div class="info-item-2">为了流量，他们选择真实和特立独行</div></div><div class="info-2"><div class="info-item-1">流量要回归本质；因为低质，AI 已经成为流量毒药</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760171234766_2f0f0e06983f12bbe19ae455ddd8fbeb.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">爱的十日谈</div><div class="author-info-description">胡说八道一本正经，但绝非 AI 生成。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aidecameron"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/aidecameron" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:jay.zhai@icloud.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><div class="announce-qr"><div class="announce-text">关注公众号，获取更新</div><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760245821510_wechat_qrcode_360.JPG" alt="扫码关注" /></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%89%E5%AD%97%E6%98%AF%E5%90%A6%E6%9B%B4%E4%B8%BA%E7%AE%80%E6%B4%81"><span class="toc-number">1.</span> <span class="toc-text">汉字是否更为简洁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%AF%8D%E6%8A%80%E6%9C%AF%E6%9B%BE%E7%BB%8F%E7%9A%84%E2%80%9C%E5%81%8F%E8%A7%81%E2%80%9D"><span class="toc-number">2.</span> <span class="toc-text">分词技术曾经的“偏见”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BA%E5%AE%9A%E2%80%9C%E6%84%8F%E4%B9%89%E2%80%9D%E4%B8%8B%EF%BC%8C%E5%93%AA%E7%A7%8D%E8%AF%AD%E8%A8%80%E6%9B%B4%E4%BC%98%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">固定“意义”下，哪种语言更优？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA%EF%BC%9A%E4%B8%AD%E5%9B%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B-%E6%B1%89%E8%AF%AD-%E4%BD%8E%E7%A2%B3"><span class="toc-number">4.</span> <span class="toc-text">结论：中国大模型 + 汉语 &#x3D; 低碳</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">4.1.</span> <span class="toc-text">参考资料</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/13/2025-10-13_what_2025_soai_report_tells_us/" title="2025 年的 State of AI 报告告诉我们什么？">2025 年的 State of AI 报告告诉我们什么？</a><time datetime="2025-10-12T16:00:00.000Z" title="发表于 2025-10-13 00:00:00">2025-10-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/29/2025-09-29_hot_for_real/" title="为了流量，他们选择真实和特立独行">为了流量，他们选择真实和特立独行</a><time datetime="2025-09-28T16:00:00.000Z" title="发表于 2025-09-29 00:00:00">2025-09-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/" title="研究 - 用中文驱动 LLM 是否效率更高">研究 - 用中文驱动 LLM 是否效率更高</a><time datetime="2025-09-07T16:00:00.000Z" title="发表于 2025-09-08 00:00:00">2025-09-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/29/2025-08-29_vibe_coding_is_a_hifi_thing/" title="AI 穷三代，单反毁一生">AI 穷三代，单反毁一生</a><time datetime="2025-08-28T16:00:00.000Z" title="发表于 2025-08-29 00:00:00">2025-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/07/2025-08-07_officer_meet_food_deliverer/" title="三线互联网打工人在电梯偶遇外卖小哥引发的认知思考">三线互联网打工人在电梯偶遇外卖小哥引发的认知思考</a><time datetime="2025-08-06T16:00:00.000Z" title="发表于 2025-08-07 00:00:00">2025-08-07</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2023 - 2025 By 爱的十日谈</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
