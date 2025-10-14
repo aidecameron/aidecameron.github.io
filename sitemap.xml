@@ -173,6 +173,13 @@
   </url>
   
   <url>
+    <loc>https://aidecameron.github.io/tags/vibe-coding/</loc>
+    <lastmod>2025-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://aidecameron.github.io/tags/llm/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -181,13 +188,6 @@
   
   <url>
     <loc>https://aidecameron.github.io/tags/chinese-llm/</loc>
-    <lastmod>2025-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidecameron.github.io/tags/vibe-coding/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -217,14 +217,14 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/categories/%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A0%94%E7%A9%B6/</loc>
+    <loc>https://aidecameron.github.io/categories/AI%E4%B8%8E%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/categories/AI%E4%B8%8E%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://aidecameron.github.io/categories/%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A0%94%E7%A9%B6/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -238,14 +238,14 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/categories/industry-news/</loc>
+    <loc>https://aidecameron.github.io/categories/opinions/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/categories/opinions/</loc>
+    <loc>https://aidecameron.github.io/categories/industry-news/</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
