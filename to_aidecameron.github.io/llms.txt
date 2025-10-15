@@ -4,7 +4,7 @@
 
 这是一个个人技术博客，主要分享 AI 技术趋势、编程经验、企业管理以及人文思考。博主 JayZ 拥有三十年程序开发经历和丰富的市场营销经验。
 
-网站地址：https://aidecameron.github.io/
+网站地址：https://aidecameron.github.io
 
 ## 主要页面
 
