@@ -9,8 +9,33 @@
     <atom:link href="https://aidecameron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个灵活的中年人的个人博客，记录学习、阅读、实践，以及感悟。</description>
-    <pubDate>Sun, 12 Oct 2025 16:00:00 GMT</pubDate>
+    <pubDate>Wed, 15 Oct 2025 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>人皇伏羲是当代计算机始祖</title>
+      <link>https://aidecameron.github.io/2025/10/16/2025-10-16_bagua_relates_to_modern_computer_and_ai/</link>
+      <guid>https://aidecameron.github.io/2025/10/16/2025-10-16_bagua_relates_to_modern_computer_and_ai/</guid>
+      <pubDate>Wed, 15 Oct 2025 16:00:00 GMT</pubDate>
+      
+      <description>伏羲发明八卦，八卦的一个特征是二进制，被莱布尼兹发掘并重视，影响了哥廷根学派冯诺依曼的 EDVAC 设计理念，成为现代计算机重要的数理基础。</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="伏羲发明八卦"><a href="#伏羲发明八卦" class="headerlink" title="伏羲发明八卦"></a>伏羲发明八卦</h2><p>“八卦”是中国古圣先贤——人皇伏羲的发明，这个事件不仅见于《周易·系辞上传》，而且记录于《淮南子·精神训》、《史记·五帝本纪》等若干史书。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497563_Pasted%20image%2020251016134515.png" style="max-width:450px; width:100%; height:auto;">根据朱熹《易经集注》的伏羲八卦次序图<p>八卦由三个横线组成，每条线称为“爻”，为阴爻（“- -”，断线）或阳爻（“—”，实线）。<br>又据史书记载，周文王姬昌，在他被殷纣囚禁在羑里喝茶的时候，闲着无事，将八卦推演为六十四卦。</p><p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497563_Pasted%20image%2020251016134836.png" alt="|400 "></p><h2 id="莱布尼兹的兴奋"><a href="#莱布尼兹的兴奋" class="headerlink" title="莱布尼兹的兴奋"></a>莱布尼兹的兴奋</h2><p>十七世纪，德国哲学家、数学家威廉·莱布尼兹，有一次偶然和一位中国通，耶稣传教士熊三拨（Joachim Bouvet）交流。熊向莱布尼兹展示了易经中的卦序图，引起了后者极大的研究兴趣。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497563_Pasted%20image%2020251016135406.png" style="max-width:400px; width:100%; height:auto;">莱布尼兹<p>1716年，莱布尼兹在其信件《论中国人的自然神学》中激动的讲，“六十四卦代表了一个二进制算法……数千年后，我重新发现了这个问题”。</p><p>莱布尼兹认为，二进制的两个元素“阴”和“阳”的对立统一，和宗教哲学中的“存在”与“虚无”，包括他自己的二元性哲学思想不谋而合。</p><p>莱布尼兹不仅仅以发明微积分和导数表示法而出名，他在晚年，曾长期和汉诺威公国的君主关系紧密，负责撰写科学政策建议。</p><p>汉诺威君主出资创立了哥廷根大学。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497564_Pasted%20image%2020251016135852.png" style="max-width:600px; width:100%; height:auto;"><p>哥廷根大学出过多位宗师级别的学者，是为“哥廷根学派”。</p><p>其中有数学之王高斯，还有数学公理化的代表人物大卫·希尔伯特。</p><h2 id="现代计算机架构之祖"><a href="#现代计算机架构之祖" class="headerlink" title="现代计算机架构之祖"></a>现代计算机架构之祖</h2><p>而希尔伯特是匈牙利数学家冯诺依曼的学术导师。</p><p>冯诺依曼是犹太人，因为纳粹迫害，移民美国。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497564_Pasted%20image%2020251016140244.png" style="max-width:400px; width:100%; height:auto;">当代计算机奠基人冯诺依曼<p>二战期间，德国和盟军打仗。为了对付德国的飞机和导弹，美国军方让大学的科学家研究弹道计算，用于拦截。</p><p>德国那边，已经有了柏林工业大学康拉德·楚泽先行半步，他开发了第一台纸带穿孔驱动的计算机 Z1。大洋彼岸，冯诺依曼带领的科研团队与之竞争。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760597510108_Pasted%20image%2020251016145140.png" style="max-width:500px; width:100%; height:auto;">楚泽（1910~1995）Z1 的复刻品<h2 id="二进制（八卦）之于计算机"><a href="#二进制（八卦）之于计算机" class="headerlink" title="二进制（八卦）之于计算机"></a>二进制（八卦）之于计算机</h2><p>数字的处理效率是计算机的基础。</p><p>古代西方长时间采用罗马数字计数，罗马数字在处理数值比较大的乘法运算时，步骤繁琐。后来，13世纪，意大利数学家斐波那契首先开始使用阿拉伯数字。阿拉伯数字，其实是古代印度人的发明，0到9的周而复始体现了印度教和佛教中“周而复始”的轮回思想。</p><p>早一点的计算机，如 ENIAC，采用十进制进行计算，性能与 Z1 难分伯仲。冯诺依曼在继续设计新一代电子管计算机 EDVAC 时，认为根源在于十进制效率低下。</p><p>他想起“师祖”莱布尼兹倡导的二进制，于是把它和布尔代数结合在一起，用电路的“断”和“开”匹配“0”和“1”，执行效率得以极大提高。</p><img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/10/1760596497565_Pasted%20image%2020251016140531.png" style="max-width:500px; width:100%; height:auto;">左数第二位女士拿着的是 EDVAC 主板<p>于是，今天主流计算机的技术路线得以确立。包括所有个人电脑和智能手机，虽然没有再使用电子管，而是使用高精度的硅物质与非门实现逻辑电路，但是仍然没有脱离“冯诺依曼架构”。</p><p>人工智能训练和推理所依赖的 GPU 平台，本质上还是“冯诺依曼架构”。</p><p>所以，一言以蔽之，当代计算机，以及 AI，本质上是人皇伏羲的历史传承。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><p>伏羲八卦次序图。Sarang - Own xls drawing by uploader，公有领域，<a href="https://commons.wikimedia.org/w/index.php?curid=6245330">https://commons.wikimedia.org/w/index.php?curid=6245330</a></p></li><li><p>莱布尼兹画像。Christoph Bernhard Francke - Herzog Anton Ulrich-Museum Braunschweig，公有领域，<a href="https://commons.wikimedia.org/w/index.php?curid=57268659">https://commons.wikimedia.org/w/index.php?curid=57268659</a></p></li><li><p>哥廷根大学图片。公有领域，<a href="https://commons.wikimedia.org/w/index.php?curid=620607">https://commons.wikimedia.org/w/index.php?curid=620607</a></p></li><li><p>楚泽计算机 Z1。ComputerGeek - de.wikipedia.org: 22:33, 27. Dez 2005 . . ComputerGeek (Diskussion) . . 1037 x 778 (91664 Byte), CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=735841">https://commons.wikimedia.org/w/index.php?curid=735841</a></p></li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://aidecameron.github.io/categories/opinions/">意见</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/chinese-llm/">国产大模型</category>
+      
+      <category domain="https://aidecameron.github.io/tags/history/">历史</category>
+      
+      <category domain="https://aidecameron.github.io/tags/ai-history/">AI历史</category>
+      
+      
+    </item>
     
     <item>
       <title>2025 年的 State of AI 报告告诉我们什么？</title>
@@ -54,8 +79,6 @@
       <category domain="https://aidecameron.github.io/tags/ai-human/">AI与人</category>
       
       <category domain="https://aidecameron.github.io/tags/llm/">LLM技术</category>
-      
-      <category domain="https://aidecameron.github.io/tags/%E4%B8%AD%E6%96%87%E5%A4%A7%E6%A8%A1%E5%9E%8B/">中文大模型</category>
       
       
     </item>
@@ -141,8 +164,6 @@
       
       
       <category domain="https://aidecameron.github.io/categories/research-practice/">研究实践</category>
-      
-      <category domain="https://aidecameron.github.io/categories/research-practice/opinions/">意见</category>
       
       
       <category domain="https://aidecameron.github.io/tags/AI/">人工智能</category>
