@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/2025/07/29/2025-07-29_1396_gen_ai_casestudy/</loc>
+    <loc>https://aidecameron.github.io/2025/09/29/2025-09-29_hot_for_real/</loc>
     
     <lastmod>2025-10-13</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/2025/09/29/2025-09-29_hot_for_real/</loc>
+    <loc>https://aidecameron.github.io/2025/07/29/2025-07-29_1396_gen_ai_casestudy/</loc>
     
     <lastmod>2025-10-13</lastmod>
     
@@ -137,6 +137,13 @@
 
   
   <url>
+    <loc>https://aidecameron.github.io/tags/vibe-coding/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://aidecameron.github.io/tags/ai-human/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -145,6 +152,20 @@
   
   <url>
     <loc>https://aidecameron.github.io/tags/ai-social/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidecameron.github.io/tags/llm/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidecameron.github.io/tags/chinese-llm/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -200,20 +221,6 @@
   </url>
   
   <url>
-    <loc>https://aidecameron.github.io/tags/vibe-coding/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidecameron.github.io/tags/chinese-llm/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://aidecameron.github.io/tags/history/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -222,13 +229,6 @@
   
   <url>
     <loc>https://aidecameron.github.io/tags/ai-history/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidecameron.github.io/tags/llm/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -244,21 +244,14 @@
 
   
   <url>
-    <loc>https://aidecameron.github.io/categories/insights/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidecameron.github.io/categories/research-practice/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://aidecameron.github.io/categories/AI%E4%B8%8E%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidecameron.github.io/categories/insights/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -273,6 +266,13 @@
   
   <url>
     <loc>https://aidecameron.github.io/categories/%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidecameron.github.io/categories/research-practice/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

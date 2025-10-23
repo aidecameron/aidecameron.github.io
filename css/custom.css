@@ -25,3 +25,19 @@
   max-width: 100%;
   height: auto;
 }
+
+
+@font-face{
+  font-family:'WenKai';
+  src:url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1/style/LXGWWenKai-Regular.woff2') format('woff2');
+}
+body{font-family:'WenKai',sans-serif;font-size:18px;line-height:1.75;}
+
+
+/* source/css/custom.css */
+/* body               { font-size: 18px; } */
+article            { line-height: 1.75; }
+@media (max-width: 767px) {
+  body              { font-size: 16px; }
+  article           { line-height: 1.7; }
+}

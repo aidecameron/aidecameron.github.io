@@ -154,9 +154,9 @@
     <category term="实践与研究" scheme="https://aidecameron.github.io/categories/%E5%AE%9E%E8%B7%B5%E4%B8%8E%E7%A0%94%E7%A9%B6/"/>
     
     
-    <category term="国产大模型" scheme="https://aidecameron.github.io/tags/chinese-llm/"/>
-    
     <category term="LLM技术" scheme="https://aidecameron.github.io/tags/llm/"/>
+    
+    <category term="国产大模型" scheme="https://aidecameron.github.io/tags/chinese-llm/"/>
     
   </entry>
   
