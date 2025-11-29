@@ -9,8 +9,37 @@
     <atom:link href="https://aidecameron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个灵活的中年人的个人博客，记录学习、阅读、实践，以及感悟。</description>
-    <pubDate>Tue, 25 Nov 2025 16:00:00 GMT</pubDate>
+    <pubDate>Fri, 28 Nov 2025 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>OK Computer 是怎样的一个作品？</title>
+      <link>https://aidecameron.github.io/2025/11/29/2025-11-29_kimi_ok_computer/</link>
+      <guid>https://aidecameron.github.io/2025/11/29/2025-11-29_kimi_ok_computer/</guid>
+      <pubDate>Fri, 28 Nov 2025 16:00:00 GMT</pubDate>
+      
+      <description>Kimi 新发布的智能体 OK Computer 完成度很高，但可惜其设计拒绝了大多数用户。</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>昨天，从家里的高中生那里，我刚了解到，原来世界上有两个 “OK Computer”。</p><p>其一，是英国摇滚乐队 Radiohead 的第三张录音室专辑，发行于1997年5月28日，被认为是90年代最具影响力的摇滚专辑。</p><p>其二，是 AI 工具 Kimi 的一个新产品，非注册用户不可使用，注册用户一天只能用两次，除非升级付费。</p><p>咸鱼上，Kimi 的 OK Computer 代问问题，大概 5 元一次。跑一次，Kimi 的 AI 代理会化充分的时间，为用户生成一个“研报”，全部素材可以下载。</p><p>Radiohead 的 OK Computer 二手唱片专辑，最低价格大约 50 元人民币。</p><p>Radiohead 的作品，反映了人类个体对技术异化、对现代社会焦虑。我试了一下 Kimi 的 OK Computer，我猜，它让大多数用户更加焦虑。</p><p>我对 Kimi 并无意见。相反，它的 Mac 版是我认为少有的清爽的 AI 客户端，非常喜爱，使用频度很高。</p><p>与面面俱到，但试图替代缺省浏览器，劫持操作系统里所有快捷键的“豆包”相比，Kimi 电脑版几乎没有多余的按钮，资源占用也不过分。简洁的像个四重奏。</p><p>但 Kimi 的 OK Computer 的设计实在是让人不明就里。</p><p>我问了它一个问题，“珠海有几个机场？”</p><p>本以为它会秒出答案，至多做一个联网搜索。但它却认认真真的拆分任务，花了二十多分钟，还写了程序代码，为了给用户一个交待。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/11/1764416921042_Pasted%20image%2020251128163153.png" style="max-width:600px; width:100%; height:auto;"></figure><p>教员伟人讲过，世界上最怕“认真”二字。</p><p>现在我最怕的是 AI 认真。正如用户说想吃牛肉面，AI 说，“这个需求太棒了！让我们不妨制定规划，再叠加深度思考。……，这样吧，先租一片草地，养一头牛……”</p><p>这不是个例，我又就着免费额度，问了它另外一个问题，“OK Computer 属于英伦摇滚吗？”</p><p>对乐迷，这是个见仁见智的问题，英国人弄的摇滚不一定是英伦摇滚，正如中国人不一定都会功夫。于是，Kimi 像素风格的智能体界面开机，开启分析的全流程。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/11/1764416921042_moonshot3_3.gif" style="max-width:600px; width:100%; height:auto;"></figure><p>我耐心地等了小半个小时，它终于 run 出了一份非常详实的报告，其角度之全面，令人不得不服。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2025/11/1764416921051_moonshot4_2.gif" style="max-width:600px; width:100%; height:auto;"></figure><p>我终于明白了，原来“OK Computer”这个产品，不是帮我回答问题的智能体，而是帮我写研究报告的智能体。</p><p>我提的这些问题，只是需要几个字的简单答案，而“OK Computer”给了我十分尽责的分析。</p><p>每个用户，每天只能免费用两次这个产品。从需要报告的用户角度，从 Kimi 产品经理的角度，在云端有个智能体化费大几十分钟给你有条不紊地 run 一个报告，中间还 vibe 了程序，真是赚到了。</p><p>但从普通用户的角度，提出问题，看到它的步骤规划，就会把“OK Computer”的界面果断关掉，应为它太浪费时间。</p><p>在 AI 生成内容充斥网络的年代，用户的“时间”和“注意力”同样珍贵。</p><p>没错，是用户没有领会到它的强大，这一届用户普遍水平不高。但作为一个智能体，对用户的问题需求，不能有最基本的判断——是应该简洁明了的给出答案，还是撸起袖子干代码和研报，这是合格的 AI 智能体吗？配得上“智能”二字吗？</p><p>我猜不少小白用户，会因为误点了“OK Computer”，会从此不再使用 Kimi。</p><p>世界上有 To B 的产品，有 To C 的产品，以及 To VC 的产品。</p><p>To B 的产品面向企业，To C 的产品面向大众。To VC 的产品面向投资人。</p><p>基本上“OK Computer”是一个 To VC 的产品。</p><p>界面炫酷，底层完成度高，无缝将编码智能体、检索智能体编排。将 vibe coding 藏在水面之下，有超越 claude code 的雄心。它也给投资人熬过红海的信心。</p><p>但最终用户看不到这些，看到的只是小题大做和无谓等待，以及丰满的科技细节。</p><p>罗技的新 CEO Hanneke Faber 最近接受采访说，“科技最好的时候，是在你根本不知道它的存在。”</p><p>她讲的很有道理。</p>]]></content:encoded>
+      
+      
+      <category domain="https://aidecameron.github.io/categories/opinions/">意见</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/AI/">人工智能</category>
+      
+      <category domain="https://aidecameron.github.io/tags/llm-app/">LLM应用</category>
+      
+      <category domain="https://aidecameron.github.io/tags/vibe-coding/">氛围编程</category>
+      
+      <category domain="https://aidecameron.github.io/tags/chinese-llm/">国产大模型</category>
+      
+      <category domain="https://aidecameron.github.io/tags/product-marketing/">产品营销</category>
+      
+      
+    </item>
     
     <item>
       <title>有限与无限的游戏</title>
@@ -174,9 +203,9 @@
       <category domain="https://aidecameron.github.io/categories/opinions/">意见</category>
       
       
-      <category domain="https://aidecameron.github.io/tags/llm/">LLM技术</category>
-      
       <category domain="https://aidecameron.github.io/tags/ai-human/">AI与人</category>
+      
+      <category domain="https://aidecameron.github.io/tags/llm/">LLM技术</category>
       
       
     </item>
