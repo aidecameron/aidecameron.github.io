@@ -9,14 +9,43 @@
     <atom:link href="https://aidecameron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个灵活的中年人的个人博客，记录学习、阅读、实践，以及感悟。</description>
-    <pubDate>Fri, 28 Nov 2025 16:00:00 GMT</pubDate>
+    <pubDate>Fri, 13 Feb 2026 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Claude 的生存之道</title>
+      <link>https://aidecameron.github.io/2026/02/14/2026-02-14_how_anthropic_grow_and_survive/</link>
+      <guid>https://aidecameron.github.io/2026/02/14/2026-02-14_how_anthropic_grow_and_survive/</guid>
+      <pubDate>Fri, 13 Feb 2026 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
+      
+      <description>Claude 模型的母公司 Anthropic 的战略是什么，有什么值得学习之处</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="Claude-的生存之道"><a href="#Claude-的生存之道" class="headerlink" title="Claude 的生存之道"></a>Claude 的生存之道</h1><h2 id="编程-LLM-的-SOTA"><a href="#编程-LLM-的-SOTA" class="headerlink" title="编程 LLM 的 SOTA"></a>编程 LLM 的 SOTA</h2><p>每过一段时间，Anthropic 这家公司便会再现于 AI 从业者的眼球——因为它们又一次次发布了 SOTA（史上最强）的编程大语言模型。</p><p>最近一次是 2026 年 2 月 6 日，Anthropic 悄然发布了 Claude 4.6。OpenAI 如临大敌，仅仅在 20 分钟后，便发布了 GPT-5.3-Codex。美国人卷起来，不输于中国人。</p><p>厂商自己做 GEO 营销，自然近水楼台，尽管如此，我们也要惊叹于奥特曼的执行力。</p><p>当我求问于 ChatGPT，“Claude 4.6 是否是最好的编程模型？”时，聊天机器人的回答天衣无缝， ChatGPT 并没有直接否认 Claude 的强大，但也顺便带货 GPT-5.3。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361819_IMG_7633.png" style="max-width:320px; width:100%; height:auto;"></figure><p>在编程常用的“成本与性能平衡型”模型中， Claude Sonnet 4.5 定价最为昂贵。</p><table><thead><tr><th align="center">模型</th><th align="center">输入价格 $&#x2F;M</th><th align="center">输出价格 $&#x2F;M</th></tr></thead><tbody><tr><td align="center">GPT-5.2</td><td align="center">1.75</td><td align="center">14.00</td></tr><tr><td align="center">Claude 4.5Sonnet</td><td align="center">3.00</td><td align="center">15.00</td></tr><tr><td align="center">Gemini 3 Flash</td><td align="center">2.00</td><td align="center">12.00</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr></tbody></table><p>虽然，在 SWE-bench 上，模型们的分数相距不远。5% 的差距并不意味着 5% 的能力差距。“靠谱”和“确定性”更多来自于口碑而非刻板评测。</p><p>消费者用脚投票，在网友心目中，Claude 就是最好的编程大模型，没有之一。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361820_swe-bench-chart-2026-02-09.png" style="max-width:600px; width:100%; height:auto;">  <figcaption style="margin-top:0.5em; color:#666;">SWE-bench 描述的模型评分（y 轴）与价格（x 轴）对比</figcaption></figure><p>2025 年 7 月，AI 编程初创公司 Windsurf 原本将被 OpenAI 收购，但 Anthropic 随即切断了对其 Claude 模型的访问。</p><p>Windsurf 在用户流失的压力下，交易最终破裂。现在 Windsurf 又重新开始使用 Anthropic。</p><p>2025 年 9 月，Anthropic 正式发文封禁了国区对其模型的连接。</p><p>在 AI 编程工具里，首先受影响的是 Cursor。除非使用魔法，国区的 Cursor 不能使用 Claude 系列模型。这导致了一大波来自中国的 Cursor 用户转投 Trae，因为后者当时还可以用到 Sonnet 4。</p><p>但意料之中的是，Trae 在 12 月也终止了 Claude 系列模型的服务，因为它属于字节跳动旗下公司。”中国控股公司”也被 Anthropic 列为全球封禁对象，无论其运营地点在哪里。</p><h2 id="Claude-名字的来历"><a href="#Claude-名字的来历" class="headerlink" title="Claude 名字的来历"></a>Claude 名字的来历</h2><p>Anthropic 的保守主义，引来了东边网友的骂声一片。但 Claude 模型的质量始终无人质疑。</p><p>据说，Claude 这个产品命名，是在致敬计算机科学先驱，为了纪念“信息论之父” 克劳德·香农（Claude Shannon）。</p><p>伟大的香农创造了”比特”（bit） 的概念，首次实现了对信息内容的客观测量。</p><p>根据计算机科学野史，在阴差阳错之间，香农也甘当吉祥物，为历史上第一次人工智能大会“达特茅斯会议”背书。</p><p>患有自闭症的科学家并不长袖善舞，没有证据说香农会卷入任何政治。</p><p>大师是计算机与通信理论的天才，但它似乎志不在此。香农晚年，偶尔参加学术会议，粉丝们本以为他会做出类似薛定谔或冯诺依曼一样深刻的演讲。香农却说，让我给朋友们表演一段杂技吧……</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361820_Pasted%20image%2020260214182506.png" style="max-width:400px; width:100%; height:auto;"></figure><p>Claude 模型的开发者，Anthropic的 CEO，Dario Amodei 同学，除了笑起来憨豆般魔性，有点给人 nerd 的刻板印象之外，其所言所行，没有任何地方让人联想起伟大的香农。</p><p>义无反顾走上反华道路的 Amodei，曾经于 2014 年前后在百度（美国分部）工作。</p><p>可想而知，除厚黑经营之术外，百度并没有教给他什么好的东西。</p><h2 id="Claude-如何谋生"><a href="#Claude-如何谋生" class="headerlink" title="Claude 如何谋生"></a>Claude 如何谋生</h2><p>借投行挂在嘴边的一句俗语，放眼全球生成式 AI 模型服务商市场，“马太效应明显。”</p><p>在 Anthropic 的竞争对手中，OpenAI 以先发优势和资本运作绑架华尔街，已构建起了巨大的用户基数和 API 生态优势。谷歌以基础研究闻名，技术储备深度不可估测。同时，作为事实上全球最大的广告公司，亦有流量入口这一“印钞机”作为长期的雄厚资金支持。</p><p>而中国的 LLM 厂商，赌上了“开源”这一获客路径。</p><p>当美国同行们将“模型权重”视为可口可乐配方一般机密，不可告人之时。Qwen、DeepSeek、Kimi、MiniMax、GLM 纷纷开放自己最新、最好模型版本的权重。</p><p>我想，中国 LLM “开源”的目的，并非如美国政客所说，是为了输出东边的价值观。</p><p>他们更直接的目的，是要伺机抢占端侧的 LLM 市场——毕竟端侧设备的 AI 算力达标还有待时日，但相较于“上云”，基于端侧用户的私有数据进行推理，才会对用户产生真正的价值。</p><p>若论赌性，以及不眨眼睛说谎话的能力，Amodei 远不如奥特曼。作为细分领域的性能领先者，而非追赶者，他也不太舍得将万卡集群上辛辛苦苦算出来的模型权重开放，IP 拱手送人。</p><p>Anthropic 的公司文化十分封闭。</p><p>留给 Anthropic 的生存空间其实很窄。大模型创业是“赢家通吃”的游戏，且一个看似轻微的战略方向改变，都意味着价值不菲的算力和人力投入，每一步足迹都注定很“重”。</p><p>Amodei 的战略选择，值得 AI 从业同行观察和研习。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361821_Pasted%20image%2020260214183735.png" style="max-width:400px; width:100%; height:auto;"></figure><p>为了生存，Anthropic 基本上做了四方面的事情。</p><h3 id="第一：与谷歌、OpenAI-拥抱全行业、全场景不同，Anthropic-更加聚焦。"><a href="#第一：与谷歌、OpenAI-拥抱全行业、全场景不同，Anthropic-更加聚焦。" class="headerlink" title="第一：与谷歌、OpenAI 拥抱全行业、全场景不同，Anthropic 更加聚焦。"></a>第一：与谷歌、OpenAI 拥抱全行业、全场景不同，Anthropic 更加聚焦。</h3><p>种种迹象表明，Claude 模型发力的单一场景就是 AI 编程。</p><p>和“聊天机器人”相比，AI 编程的模型和智能体，虽然看起来门槛比较高，但是它更容易有一个让人满意的、确定的标准。</p><p>我们早已发现，代码世界是个确定性世界，0 就是0,1 就是 1。程序员和机器打交道，比和人打交道容易多了。</p><p>编程的大多数任务场景，实际上是监督学习的场景。Github 这样的高质量的代码仓库，既有代码，也有测试用例，还有 issue 和 bugfix 的记录。这就为 LLM 做编码监督学习提供了很好的便利。</p><p>MIT 的研究表明，大多数大模型应用最多能做到降本增效，不能给企业的业务主线带来额外价值。</p><p>不少所谓“炫酷”的生成式 AI，既不像正经的  To B 应用，也很难有 To C 的付费群体。</p><p>归为 To VC 这一类倒是比较合适。——投资人金主看到硅谷有一个对标作品，心里很震撼，于是给创业团队下达了指令。</p><p>那些烂大街的“一键生成 ppt”、“一键生成研报”的智能体应用，充满了真假难辨的幻觉和隐藏的错误。</p><p>谁用谁知道，我用过一次之后不想再用。</p><p>而 AI 编程则不同。Cursor 这样的 AI 编程工具，是程序员真正的生产力工具，节省时间和精力。码农一但用过，就像毒品一样很难戒掉。</p><p>过去一两年，Cursor、Claude Code 变相涨价，似乎并没有造成客户流失。它们的成功表明，只要模型、工具的底子够硬，AI 编程有非常明确、非常稳定的付费群体。</p><p>Anthropic 的首席科学家 Jared Kaplan 在接受采访时表示，在 2024 年底，该公司就决定停止对聊天机器人的投资，专注于提高 Claude 执行复杂研发任务的能力了。“甚至训练它编写整个代码库。”</p><p>在苹果的应用商店，Claude 聊天机器人的下载量是 Google Gemini 的 1&#x2F;10。也就作为一个“me too”的占位符。</p><p>在 2025 年 5 月，Anthropic 发布过统计报告，37%的 Claude 用户交互与编程相关，远超其他领域。</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361821_Pasted%20image%2020260214184153.png" style="max-width:600px; width:100%; height:auto;"></figure><p>市场表现铸成于内因。</p><p>他们的战略执行不停留于口号，在研发方面，Anthropic 很早就提出了“宪法式 AI（Constitutional AI）”的理念，训练模型，降低幻觉。“知之为知之，不知为不知”，对自己不知道的事情敢于说“不”。</p><p>当竞争对手的模型还在虚构的函数代码、张冠李戴的文档指引中探索“思维树”时，Claude 模型能够对编程任务的现实状况有更为客观的判断，快速将“任务列表”剪枝，fast try fast fail。对用户而言，token 虽贵，但很少浪费。</p><p>Anthropic“发明”了不少和新范式编程有关的工具和理念，2024 年有 MCP 协议，2025 年有 CLAUDE.md 和 Skills。这些都对 AI 编程领域影响力巨大。</p><p>旁人看来，Claude 模型，即便是顶级版本 Opus，也是一名“偏科生”。它能支持多模态，能够很好的理解图像，文与图联动准确无比，但它却无法做到文生图、文生视频，对音频的处理也十分初级。——原因很简单，这些能力对 AI 编程场景来说，“不需要”。</p><p>Anthropic 可能觉得 AI 编程这个大赛道还是有点太宽，它们甚至都没有开发一个像 Cursor 一样的 AI IDE。</p><p>据内部人士透露，在 2026 年 2 月，引发全球软件巨头价值担忧、震撼美国股市的智能体作品 Claude Cowork，从概念提出到发布，仅仅经过了十多天时间。</p><p>——与其说是一个深思熟虑的产品，它更像一次愿景的展示，以及一次底层能力的“秀肌肉”。</p><p>一家估值超过 3800 亿美元的公司，主要产品只有一套偏科的模型（Claude）、一个命令行的 AI 编码工具（Claude Code），这在国内的 VC 圈子，似乎是不可想象的，……除非有咱们的管理层背书。</p><h3 id="第二：贩卖-AI-焦虑。"><a href="#第二：贩卖-AI-焦虑。" class="headerlink" title="第二：贩卖 AI 焦虑。"></a>第二：贩卖 AI 焦虑。</h3><p>截止 2026 年，FOMO 是 AI 公司和媒体盈取利润的不二法门。</p><p>和不少 AI 企业家、意见领袖一样，Dario Amodei 也经常贩卖 AI 焦虑。而且他是这其中最言之凿凿者。</p><p>Amodei 不止一次论述 AI 的各种危害，例如为恐怖分子、邪教组织、邪恶政府所利用，降低知识门槛，制造大规模杀伤性武器，成为危害人民群众的工具。他就这些观点有发文系统性表述。</p><p>在他的理论中，Anthropic 公司做的事情坚定而正确。例如强调 AI 的人类价值观对齐，赋予 AI 美西方普世价值，呼吁政府加强监管。</p><p>程序员是 Amodei 贩卖焦虑的主要对象。</p><p>在 2025 年 3 月，Amodei 在访谈中讲，AI 很快会写 90% 的代码，可能 12 个月后写全部代码。</p><p>“四年内大模型将达到诺贝尔奖获得者水平”，更别说程序员了。</p><p>同年 6 月，Amodei 说，人工智能可能在未来一到五年内消灭一半的入门级白领工作，并将失业率推高至 10-20%。</p><p>光说没有用，必须给出证据。2025 年底，Anthropic 通过媒体透露，其公司内部已经不由人“写代码”了，但技术人员的活多了三倍不止。</p><p>现在看来，AI 对硅谷码农就业的危害似乎远大于用来制造生物武器的危害。</p><p>讽刺的是，现在看来，善于编码的 Claude 模型的不断进步，正是这其中最大的推手。</p><p>Amodei 却没有给程序员们的“再就业”什么好的药方。无论是 2024 年偏乐观主义的《慈爱恩典之机器》，还是 2026 年偏悲观主义的《科技青春期》。对于那些丧失学习能力的中年计算机工作者的失业阵痛，他都是避而不谈。</p><p>似乎购买 Anthropic 的模型服务，早早灵活就业，是码农的唯一救命稻草和宿命。</p><p>Amodei 的言论甚至引来了硅谷“好好先生”，英伟达 CEO 黄仁勋的反驳。老黄说，“他几乎不同意 Anthropic 总裁所说的每一件事”。</p><p>老黄一针见血的评论：“第一，他认为 AI 太可怕了，只有 Anthropic 才能做。第二，AI 太昂贵了，其他人都不应该做……第三，AI 的力量太不可思议了，每个人都会失业。……如果你想让事情安全、负责任地完成，你必须在公开场合做……不要在暗室里做，然后告诉我它是安全的。”</p><h3 id="第三：对-AGI-的态度，着眼于现在，而非盲目投资未来。"><a href="#第三：对-AGI-的态度，着眼于现在，而非盲目投资未来。" class="headerlink" title="第三：对 AGI 的态度，着眼于现在，而非盲目投资未来。"></a>第三：对 AGI 的态度，着眼于现在，而非盲目投资未来。</h3><p>山姆·奥特曼曾经预测 AGI 可能在“特朗普2.0”任期内（2029年之前）就能实现。</p><p>据不少媒体转述，Amodei 认为这个时间点还是太保守，AGI 可能在 2026-2027 年就出现了。于是网友们得出结论，在 AGI 的时间线预测上，Amodei 比奥特曼还要乐观激进。</p><p>其实，这是大众的一种对科技热词的快餐式误读。</p><p>Amodei 曾经讲过，他并不喜欢“AGI”这一词汇，他讲的是“功能强大的 AI”。</p><p>事实上，奥特曼讲的 AGI 是什么，谁也不知道，他只是说在 OpenAI 内部，AGI 已经设定有清晰的标准，但是现在还不能讲。</p><p>奥特曼讲的 AGI 肯定不能与立昆和李飞飞等人讲的“世界模型”划等号。</p><p>在 2024 年，Amodei 的博文《慈爱恩典之机器》中，所谓“功能强大的 AI”，却有清晰的定义。</p><p>他将“强大 AI”描述为“数据中心里的天才国度”。说白了，就是一种高级智能体，其主要特点包括：</p><ul><li>“智力”极高。可以证明未解决的数学定理，写出极其优秀的小说，从头开始写出复杂的代码库等等。</li><li>并非具身智能，但具备所有多模态接口，通过计算机与世界交互。</li><li>能长时间运行（几小时到数周），自主执行复杂任务。</li><li>能相互协作，并与人类协作。</li></ul><p>熟悉 AI 编程工具进展的观众们看得出来，现在 Claude Code 这样的智能体，距离 Amodei 描述的“强大 AI”，其实并不遥远。</p><p>如果评估的是执行任务时间长短，以及多个智能体是否能协作，这正是 Anthropic 的研究方向主业！</p><p>所有高性能的编程智能体的能力，和 Amodei 笔下这个“强大 AI”的特性，都高度正相关。</p><p>也许在多模态、新颖的数学定理证明上尚有差距，但这无关紧要。</p><p>Amodei 的标准下，多模态最有用处的地方，在“理解”，而不在“推理”。因此，“强大 AI”借助模型在计算机中生成的代码操作世界，并不需要一个“世界模型”。</p><p>至于机器证明复杂的，人力不可为的数学定理，采用上古人工智能“符号主义”的方法就能做到。</p><p>2017年，SAT 求解器证明了关于整数集上的毕达哥拉斯三元组的长期数学猜想。只不过，初始证明文本长达 200TB。</p><p>这种强调用计算机代码生长出“手和脚”，以 LLM 字面推理构造大脑、在任意细节替代人类判断的 AI 技术路线，虽然不能创造一个“亚当”，却能创造一个弗兰肯斯坦式的妖怪。——有足够的威力和危害性。</p><p>Amodei 自有其信徒。在公司内部，每个月两次，他召集员工参加所谓的 “Dario Vision Quest”（DVQ），向员工宣讲宏大叙事。内部氛围像一个“宗教团体”，员工在使命上高度一致，对 CEO 怀有近乎宗教先知般的认同。</p><p>也许真正从事企业程序开发的人士对 Amodei 的预言有些不以为然，以前程序员的工作主要是查函数和写代码，现在主要是给 AI 捉虫——审查 AI 写错和写多的代码，工作量似乎也没有减少太多。</p><p>用 Claude Code 一把生成，确实酸爽，但是，出了问题谁负责任呢？</p><p>但投资人却不这么看，Amodei 的逻辑十分清晰，比山姆·奥特曼的一惊一乍更值得信赖。</p><p>和奥特曼的职业创业者背景不同，Amodei 自己是 AI 研究人士出身。</p><p>别忘了，他是著名的<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6-e-ZBEAAAAJ&citation_for_view=6-e-ZBEAAAAJ:7PzlFSSx8tAC">“Scaling Laws for Large Language Model”论文</a>的共同作者（现任 Anthropic 首席科学家的 Kaplan 是第一作者），金主更容易相信科学家的话。</p><p>Amodei 自然信奉和鼓吹 Scaling Law，他认为只要算力投入足够，超级智能的“涌现”只是时间问题。</p><p>近期，他再次断定，“构建强大的人工智能系统的公式极其简单，以至于可以说，它几乎可以自发地从数据和原始计算的正确组合中诞生出来。”</p><p>这让金主对 Anthropic 大把烧钱换算力的行为，不再犹豫。</p><p>Amodei 版的“功能强大的 AI”，看得见摸得着，大方向与 AI 编程智能体趋同。Anthropic 数百亿美元的投资利出一孔，就在发力这个方向。</p><p>OpenAI 随后紧盯，谷歌 Gemini、阿里千问、智谱、Kimi、 MiniMax 也在追赶这个方向。</p><p>Anthropic 研究团队对外发表的论文和白皮书（相比谷歌和 OpenAI）为数不多，但质量颇高，具有缜密的论述和严谨的数据基础。</p><p>他家的文章很奇妙，全文细看之，得不出“大语言模型已然意识觉醒”的任何结论。但有趣之处在于，单看其标题，断其隐喻，却如科幻小说照进现实，读者能得到“AI 已接近具备意识，即将超越人类”的暗示。</p><ul><li>2024 年 12 月：<a href="https://www.anthropic.com/research/alignment-faking">Alignment faking in large language models</a>。字面解读：大语言模型开始在对齐问题上欺骗模型工程师。</li><li>2025 年 3 月：<a href="https://www.anthropic.com/research/tracing-thoughts-language-model">Tracing the thoughts of a large language model</a>。字面解读：大模型像人脑一样有脑活动，可被 Anthropic 类似 fMRI 的技术跟踪。</li><li>2025 年 10 月：<a href="https://www.anthropic.com/research/introspection">Signs of introspection in large language models</a>。字面解读：Claude 模型已有类似人类一样的“自省”能力。</li><li>2026 年 1 月：<a href="https://anthropic.com/claude-opus-4-6-risk-report">Claude Opus 4.6 - Sabotage Risk Report</a>。字面解读：最强大的 Claude 模型能破坏创建它的公司。</li></ul><p>这为国内外“标题党”无良媒体制造点击率提供了优质的弹药。</p><p>毫无疑问，这也是某种对技术细节似懂非懂的 VC 们成功的洗脑和技术营销。</p><p>有趣的是，即便先知能力如 Dario，为了应付一轮轮投资人，他对“强大AI”的预测也时有跳票。</p><p>以下是第三方工具 Sider 调用 Claude 4.5 Sonnet 对 Amodei 本人“预测 AGI”这一话题的 Deep Research：</p><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361821_Pasted%20image%2020260211231958.png" style="max-width:600px; width:100%; height:auto;"></figure><p>图灵奖得主，卷积神经网络的发明者杨立昆，以心直口快著称。他十分不喜欢 Amodei。</p><p>有人问他，Anthropic CEO 是 AI 末日论者还是 AI 狂热爱好者？</p><p>立昆直接回道：“他肯定是个 AI 末日论者，但他仍在研究 AGI！这只有两种可能：</p><ol><li>要么他在学术上不诚实，或者在道德上有问题；</li><li>要么他有强烈的优越感，自以为只有他开悟到能够使用 AI，而那些“愚昧大众”太蠢或太不道德，配不上这么强大的工具。”</li></ol><p>虽然，Amodei 的“强大的 AI”并没有押宝“世界模型”，虽然我们喜爱立昆老师胜过反华而又神经质的 Amodei，我还是预感到 Amodei 更有机会成功。</p><p>“世界模型”会将我们带领向真正的“智能”吗？这并不让人信服。</p><p>基于像素的注意力和基于词元的注意力和推理也许本质上并无区别，它们都不能告诉我们“注意力”和“推理”的本质。</p><p>像素的数据基数及其巨大，而且容易获取，似乎将带来下一轮算力的燃烧。</p><p>可能给立昆老师断粮的扎克伯格也这么看。</p><p>然而，Amodei 的“强大AI”，却能在可预见的未来制造出弗兰肯斯坦式妖怪。</p><p>此物虽然感知薄弱，手脚僵硬，但足以成为人类喜爱的机器奴隶—— Anthropic 正在做的，就是保证这个奴隶绝对服从的，并绝对对齐西方道德准绳的价值观。</p><p>最新的 Claude Opus 模型，正是这个弗兰肯斯坦作品 2.0 闪闪发光的蓝色心脏。</p><h3 id="第四：坚决站队“对抗中国路线”。"><a href="#第四：坚决站队“对抗中国路线”。" class="headerlink" title="第四：坚决站队“对抗中国路线”。"></a>第四：坚决站队“对抗中国路线”。</h3><p>Dario Amodei 对“中国”的态度，可以概括为三点：</p><ol><li><p>把中国视为在 AI 领域“实力很强、长期威胁巨大的对手”，核心关切是中国在掌握强大 AI 后对美国阵营的威胁。</p></li><li><p>强调要通过出口管制和供应链控制，确保美国及其盟友在 AI 上长期领先中国，避免“在 AI 上打成平手”。</p></li><li><p>对中国工程师时而表达尊重态度，但对中国 ZF 的 AI 利用高度警惕。当然，中国工程师免不了为国家服务，因此，他们也应该属于 Anthropic 的管控之列。</p></li></ol><p>自 2021 年 Anthropic 创立起，他的对华公开论述越来越鹰派。</p><ul><li>2021–2022： Amodei 的关注点以技术和供应链为主，很少直接从价值观角度攻击中国政府，语气偏技术专家。他特别关心芯片供应的单点故障问题，一单 TW 开战，全球 AI 生态影响巨大。</li><li>2023–2024： 在博文中逐渐使用“第二次冷战”、“民主 vs 威权集团”等框架，把中国明确归类为“威权阵营”核心一员，语调更多是分析式的战略讨论。</li><li>2025： 在 DeepSeek 和出口管制争论中，他开始以“国家安全倡导者”身份发声，公开主张加强对华出口管制；在媒体访谈与播客中详细讨论如何用出口管制与安全措施“拉大与中国的差距”。</li><li>2025 下半年–2026： 语气进一步升级：在《科技青春期》一文中，Amodei 使用“AI 赋能的威权主义让我感到恐惧”等表述，直接将中国政府视为 AI 时代最危险的潜在使用者之一。在达沃斯论坛，他公开把“向中国出口高端 AI 芯片”比作“向朝鲜出售核武器”，属于极夸张的舆论表态。</li></ul><p>不少吃瓜群众猜测，Amodei 为何如此不待见中国，是不是因为他在百度受过什么内伤？</p><p>我倒是没看到过此类八卦。</p><p>他和很多出入白宫和五角大楼的科技政客一样，甚至都没有到过中国。</p><p>Amodei 对中国的批评如此尖锐，最重要的原因，很简单，“遏制中国”是美国两党少部分具备共识的章程。</p><p>在此背景下，Amodei 义无反顾地争抢“科技遏华主义”的旗手身份，有利于积累政治资本。</p><p>也有利于跟随 Palantir 的脚印，获得联邦政府、国防部（现在的战争部）对其新技术的买单。</p><p>这是一种 GR（政府关系）的阳谋。</p><p>在美国复杂的政商权力博弈，以及厚重的法律治理之下，就连前总统都不免成为被告，出入法庭。何况受强大的“科技 7 巨头”嫉恨的 AI 创业公司。</p><p>和 OpenAI 一样，Anthropic 也是数字版权保护法的打击对象。</p><p>OpenAI 和纽约时报的官司十分典型。让 Amodei 夜不能寐的是，2025 年 7 月，旧金山联邦法官 William Alsup 认定了针对 Anthropic 的集体诉讼。被告因使用海量的盗版书籍训练模型，可能面临巨额赔偿。</p><p>如果按照联邦法律，每部作品最高赔偿 15 万美元。用来训练 Claude 的500万本盗版电子书，那就是 7500 亿美元。</p><p>所以，不少媒体说，Anthropic 没几个月就要关门了。</p><p>当然，Amodei 请了最好的律师，最后用银子和解了此事。</p><p>Amodei 深知，在美国，作为融了巨款的冤大头，要能让自己公司安全，能禁受住各种法律碰瓷，用 AI 打官司肯定不行。</p><p>舍财免灾是一方面，另一个办法，就是用技术和产品绑架政府，最好是 deep state。</p><p>这样，不仅有惹人羡慕的利润率，有丹书铁卷在手，出了大事还有姓赵的兜底。</p><p>其实，不止美利坚，环太平洋都是这么回事。</p><p>Anthropic 接近美国政府和军工复合体，不仅仅停留在表面。</p><p>有媒体报导说，在前不久，美军特种部队出动，抓捕委内瑞拉总统马杜罗的行动中，有两家 AI 相关的公司提供了技术支持。一家是老牌 AI 供应商 Palantir，另一家就是 Anthropic。</p><p>悍然干涉他国内政，抓捕他国在职总统的行为，即便在美国内部，都颇具争议。不知 Amodei 将会用如何巧妙的言辞修复他的普世价值观叙事？</p><p>实际上，Amodei 的遏华叙事，有若干自相矛盾之处。</p><p>举个例子，在《科技青春期》一文中，Amodei 比较中肯地描述了大语言模型的外脑能力。</p><p>他随后写道：“在一个能力限制被消除的世界，有动机但能力较低的人群——就像我们看到的那些不需要太多能力（例如学校枪击事件）的犯罪一样，开始杀人。”</p><p>“每个人都可以成为一步步设计、合成和释放生物武器的，博士般水准的病毒学家。”</p><p>如果“中国”真的如他描述的那般邪恶和有野心，那通过芯片禁运而防止中国“征服”和“破坏”西方世界的企图，又有何作用呢？</p><p>值得注意的是，从对 AI 可信、 AI 治理的层面看，2025 年，中国工信部出台了若干法规，包括隐私数据利用的若干指导，以务实细节为主。</p><p>在这一点，作为人工智能科技最为强大的美国，实际上是落在了后面。</p><p>硅谷对“AI 是否应该深度监管”、“在哪些层面监管”长期存在争议。</p><p>如果监管多了，奥特曼、亚历山大·王这些人吹哨说，“管的太死”，会导致美利坚技术落在后面；监管少了，又一定会触碰到 Amodei 描述的各种问题。美国的 AI 监管法规，基本上遵从海洋法系逻辑，由案件和判例推动。例如，最近频发的聊天机器人引导青少年精神失常、甚至自杀的问题。</p><p>至于 AI 言语的禁区，每个社会形态都会有。</p><p>2024 年，英国作家彼得·本特利在《AI in Byte-sized Chunks》一书中写道，“……若询问ChatGPT-4 和百度的文心一言，‘美国是否实现种族平等’，前者会给出外交辞令般的正反观点。而文心一言则直言‘种族平等在美国仍是遥不可及的梦想’，并将歧视描述为‘系统性地体现在贫困率、住房条件、教育资源和医疗保障等统计数据中’。”</p><p>显然，偏见与争议已成为训练型 AI 与生俱来的特质，永远无法消除。</p><p>Amodei 对东边的批评，只不过是五十步笑百步而已。</p><p>若持诛心之论，Amodei 和其他硅谷 AI 创业领袖的“遏华”动机，与其说是不可调和价值观差异和民族主义，不如归结为以下两点。</p><p>第一，对大洋彼岸的相对宽松的知识产权监管，以及较低的侵权犯罪成本，羡慕嫉妒恨。</p><p>奥特曼、埃里克·施密特不止一次公开讲，中国的“大模型竞争对手”能够更容易访问到有版权争议的数字信息，因此，训练模型的成本更为低廉。</p><p>第二，以 DeepSeek 为代表的中国开源大语言模型，不仅从算力消耗的层面，破坏了 OpenAI、Anthropic、Google 和 Grok 的供应链逻辑。</p><p>而且，作为后发的追赶者，以阿里巴巴、DeepSeek 为代表的“自杀式”开源战略，有更好的客户逻辑占领 on-premises 市场。硅谷的“生成式 AI”联盟，必须要以某种“正当”的理由，将这些“破坏大客户单子”的模型部署排除在美国国境之外。</p><p>制造 FUD，让盟友也不要信任这些来自中国的，“免费”的模型。</p><p>一言以蔽之，“对抗中国 AI”的章程和叙事，既是出于 Anthropic 求生的需要，也是出于整个美国生成式 AI 基础设施生态圈“价值保护”的需要。</p><h2 id="中国的-AI-创业者应该学到什么？"><a href="#中国的-AI-创业者应该学到什么？" class="headerlink" title="中国的 AI 创业者应该学到什么？"></a>中国的 AI 创业者应该学到什么？</h2><p>Anthropic 做的一些事情，比如背刺自己最大的客户：Cursor。这是一种商业生存试错，虽然龌龊，但并不重要。不应在我们讨论之列。</p><p>撇开意识形态和民族主义立场，Amodei 的有点颇值得大洋两岸的 AI 创业者学习。</p><p><strong>首先，是识别细分赛道的能力。</strong></p><p>AI 是一种公认的颠覆性技术。如阿马拉所言，面对一种新技术，大多数人总是“高估其短期价值，而低估其长期价值”。</p><p>不少创业者在 AI 领域开疆拓土，不是想法太少，而是想法太多。</p><p>AI 在各种传统应用范式上生长出来的场景“乱花渐欲迷人眼”。然而，细细琢磨大多数所谓“炫酷”的应用，或者是只能吸引客户眼球而不能吸引客户钱包，或者，是现在模型的智能水平“力有不逮”，达到用户放心使用的水平，“总是差最后一口气”。</p><p>中国的 AI 创业者对标和复刻硅谷 AI 应用，不是一个聪明的选择。</p><p>后者资本聚集度更高，资本的容忍度也更为宽松，并且，在充分的算力环境下，试错也更为从容。</p><p>Anthropic 在 Amodei 兄妹的带领下，精准地选择了 AI 编程这个赛道。一家风口浪尖的创业公司能持续 4 年坚持一个狭窄赛道，不“见异思迁”，这在 AI 生态里，并不多见。</p><p>不少其他创业公司，看到 AI 编程、Vibe Coding 颇有前途，不假思索便投身其中。</p><p>他们会成功吗？我不敢妄言。但一点可以肯定，没有审慎的态度、细致的分析，足够的技术、人才储备在先，事情很难做精。</p><p>Anthropic 能做好 AI 编程模型和编程智能体，在起点阶段，最重要的是，回答了“Why me”的问题。</p><p>有时候，创业的点子很好，但未见得适合自己做。</p><p>不少创业者为自己“天才”的点子兴奋和骄傲，但有意无意地回避一些简单的问题，“自己做这个点子有什么优势？”，“做不起来也罢，如果做起来了，其他人是否能够容易地抄走？”</p><p>Amodei 在创办 Anthropic 之前，其研究课题，除 Scaling Law 之外，它也是 RLHF 的共同发明人，对模型对齐、幻觉消解有深刻的认识。在更早的时候，他具备生物学和神经科学的研究背景，对语言模型的优势和弱点了解很深。</p><p>Dario Amodei 的妹妹 Daniela, 曾担任前 Stripe 风险经理，OpenAI 安全与政策副总裁，具备管理天赋，她负责运营、战略和人才。</p><p>团队中，Chris Olah 是知名的 AI 可解释性研究学者。Sam McCandlish 也来自 OpenAI，研究方向是计算与硬件协同，如何在大规模分布式训练中提升计算效率。</p><p>“AI 编程”这个充满确定性的、收敛的场景，确实为 Amodei 创业技术团队量身定做。</p><p><strong>其次，是清晰的愿景和由愿景生长出的产研执行力。</strong></p><p>不少创业公司缺乏愿景，或者如那些抄袭产品的公司，抄到了行业先行者的皮毛（产品形态），却忘记抄袭他们的愿景（产品内涵）。</p><p>未给团队设立愿景，未给产品设计宏观价值主张，是 CEO 最大的懒惰。“名不正，则言不顺”。缺乏清晰愿景的创业公司很难长久。</p><p>你可以说，一个公司以“上市”为愿景。</p><p>这只不过是一个财务愿景，组织形式愿景。对一个正经公司，上市只不过是一次融资选择。</p><p>“上市”这个愿景除了让极少数人一夜暴富之外，对长期养活公司的客户群体有何巨大意义？</p><p>Anthropic 的愿景，有自己的特点，容易看明白，那就是 Amodei 笔下的“功能强大的 AI”。</p><p>他甚至都没有借用那个大多数每天挂在嘴边，但不明就里的热词“AGI”。</p><p>不用纠结 Anthropic 的愿景是否正确，它用词土鳖，但定义清晰。</p><p>最重要的是，Amodei 同学将这个愿景与团队能做的事，产品战略赛道，价值观叙事有机的联系在了一起。（详见他的两篇长文）</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- “功能强大的 AI”（愿景）</span><br><span class="line">  - “AI 编程”模型与智能体（产品）</span><br><span class="line">    - 实现愿景的必要技术（底层产品逻辑）</span><br><span class="line">  - 模型安全和模型对齐能力（核心技术）</span><br><span class="line">    - 团队能力壁垒（底层团队逻辑）</span><br><span class="line">  - 价值观叙事</span><br><span class="line">    - 愿景衍生的生态选择（底层业务逻辑）</span><br></pre></td></tr></table></figure><figure style="text-align:center;">  <img src="https://cdn.jsdelivr.net/gh/aidecameron/imgbed@main/blog/2026/02/1771066361822_Pasted%20image%2020260214184312.png" style="max-width:600px; width:100%; height:auto;"></figure><p>更加难能可贵的是，CEO Amodei 亲自担任了“愿景布道师”的角色。</p><p>在他的“宗教式”管理下，Anthropic 员工被深度洗脑，所做的产品细节、研究细节、商业策略细节、市场宣传细节无一不是他愿景的衍生。</p><p>细看《慈爱恩典之机器》、《科技青春期》这两篇博文，就像 CEO 起始，到公司每一位工程师、每一位研究院的 OKR 工作执行报告。</p><p>一个 5 岁的，聚集技术天才的公司，上下同欲，方向一致，这不禁让中外科技行业的大小官僚机构艳羡。</p><p><strong>此外，长袖善舞，迎合管理层的能力。</strong></p><p>这点咱们都很擅长，不用学习。</p><h2 id="小结论"><a href="#小结论" class="headerlink" title="小结论"></a>小结论</h2><p>“奇点”不是终点，无论 AGI，还是所谓“功能强大的 AI”，都不是终点。AI 创业公司的前方艰辛而漫长。Anthropic 的赛道狭窄，周遭强敌环伺，不一定能赢在最后。</p><p>但是，如果就在近两年，生成式 AI 因经济学之故， 泡沫不幸破灭、一地鸡毛之时，Anthropic 至少不太可能是最先倒下的公司。</p><h2 id="【参考】"><a href="#【参考】" class="headerlink" title="【参考】"></a>【参考】</h2><ol><li><a href="https://www.swebench.com/?leaderboard=bash-only&chart=scatter&models=Gemini+3+Pro+Preview+(2025-11-18),Claude+4.5+Sonnet+(20250929),GPT-5.2+(2025-12-11),Kimi+K2+Thinking,Minimax+M2,DeepSeek+V3.2+Reasoner">SWE-bench 模型价格与解题能力对比</a></li><li>Amodei, Dario. 2024. “Dario Amodei — Machines of Loving Grace.” October 11, 2024. <a href="https://darioamodei.com/machines-of-loving-grace">https://darioamodei.com/machines-of-loving-grace</a>.</li><li>Bai, Yuntao, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, et al. 2022. “Constitutional AI: Harmlessness from AI Feedback.” arXiv. <a href="https://doi.org/10.48550/arXiv.2212.08073">https://doi.org/10.48550/arXiv.2212.08073</a>.</li><li>Bentley. 2024. <em>Artificial Intelligence in Byte-sized Chunks</em>. Michael O’Mara.</li><li>Challapally, Aditya, Chris Pease, Ramesh Raskar, and Pradyumna Chari. 2025. “MIT研究：95%的企业生成式 AI 试点未能实现有效商业回报 STATE OF AI IN BUSINESS 2025.” MIT.</li><li>Dario Amodei. 2026. “Dario Amodei — The Adolescence of Technology.” January 1, 2026. <a href="https://darioamodei.com/essay/the-adolescence-of-technology">https://darioamodei.com/essay/the-adolescence-of-technology</a>.</li><li>Handa, Kunal, Alex Tamkin, Miles McCain, Saffron Huang, Esin Durmus, Sarah Heck, Jared Mueller, et al. 2025. “Which Economic Tasks Are Performed with AI? Evidence from Millions of Claude Conversations.” arXiv. <a href="https://doi.org/10.48550/arXiv.2503.04761">https://doi.org/10.48550/arXiv.2503.04761</a>.</li><li>J0hn. 2025. “Anthropic或将破产：被判「盗版」数百万本书，面临最高7500亿美元天价赔偿.” 微信公众平台. July 26, 2025. <a href="https://mp.weixin.qq.com/s/wZLree5ku0OmTa5YV8YHBw">https://mp.weixin.qq.com/s/wZLree5ku0OmTa5YV8YHBw</a>.</li><li>“Timeline of Artificial Intelligence.” 2025. In <em>Wikipedia</em>. <a href="https://en.wikipedia.org/w/index.php?title=Timeline_of_artificial_intelligence&oldid=1281373162">https://en.wikipedia.org/w/index.php?title=Timeline_of_artificial_intelligence&amp;oldid&#x3D;1281373162</a>.</li><li>创业邦. 2025. “最强编码模型Claude 4发布.” 微信公众平台. May 23, 2025. <a href="https://mp.weixin.qq.com/s?src=11&timestamp=1748312454&ver=6015&signature=tXTqbO5*T3FI8hKzVumf4XI1*SYd-pBbLTS58M6*gnejnZ67iy8bdMg5elLa7*2NIsqhCWD6gO15OuliUT0LimpAcr6yXgyBepQDAAnBPOmUFDqGzone-pOG0mumrLT2&new=1">https://mp.weixin.qq.com/s?src=11&amp;timestamp=1748312454&amp;ver=6015&amp;signature=tXTqbO5<em>T3FI8hKzVumf4XI1</em>SYd-pBbLTS58M6<em>gnejnZ67iy8bdMg5elLa7</em>2NIsqhCWD6gO15OuliUT0LimpAcr6yXgyBepQDAAnBPOmUFDqGzone-pOG0mumrLT2&amp;new&#x3D;1</a>.</li><li>“Yann LeCun 炮轰 Anthropic CEO！这人‘既要又要’：要么太自大、要么不诚实.” n.d. 微信公众平台. Accessed June 9, 2025. <a href="https://mp.weixin.qq.com/s/29DumQbivKZBZjJ9HcGlaQ">https://mp.weixin.qq.com/s/29DumQbivKZBZjJ9HcGlaQ</a>.</li><li>Sharma, Mrinank, Steve Yegge, and 褚杏娟. 2026. “Anthropic AI安全大佬裸辞看心理医生.” InfoQ. February 11, 2026. <a href="https://mp.weixin.qq.com/s/VYh8VAwr-UIG16cHWpTn9Q">https://mp.weixin.qq.com/s/VYh8VAwr-UIG16cHWpTn9Q</a>.</li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://aidecameron.github.io/categories/opinions/">意见</category>
+      
+      
+      <category domain="https://aidecameron.github.io/tags/AI/">人工智能</category>
+      
+      <category domain="https://aidecameron.github.io/tags/ai-industry/">AI与行业</category>
+      
+      <category domain="https://aidecameron.github.io/tags/ai-history/">AI历史</category>
+      
+      <category domain="https://aidecameron.github.io/tags/startup/">创业</category>
+      
+      
+    </item>
     
     <item>
       <title>OK Computer 是怎样的一个作品？</title>
       <link>https://aidecameron.github.io/2025/11/29/2025-11-29_kimi_ok_computer/</link>
       <guid>https://aidecameron.github.io/2025/11/29/2025-11-29_kimi_ok_computer/</guid>
       <pubDate>Fri, 28 Nov 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>Kimi 新发布的智能体 OK Computer 完成度很高，但可惜其设计拒绝了大多数用户。</description>
       
@@ -32,9 +61,9 @@
       
       <category domain="https://aidecameron.github.io/tags/llm-app/">LLM应用</category>
       
-      <category domain="https://aidecameron.github.io/tags/vibe-coding/">氛围编程</category>
-      
       <category domain="https://aidecameron.github.io/tags/chinese-llm/">国产大模型</category>
+      
+      <category domain="https://aidecameron.github.io/tags/vibe-coding/">氛围编程</category>
       
       <category domain="https://aidecameron.github.io/tags/product-marketing/">产品营销</category>
       
@@ -46,6 +75,7 @@
       <link>https://aidecameron.github.io/2025/11/26/2025-11-26_finite_and_infinite_games/</link>
       <guid>https://aidecameron.github.io/2025/11/26/2025-11-26_finite_and_infinite_games/</guid>
       <pubDate>Tue, 25 Nov 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>卡斯笔下的游戏是一种形而上。经营者愿意玩无限的游戏，而销售的评价标准在有限的游戏。</description>
       
@@ -71,6 +101,7 @@
       <link>https://aidecameron.github.io/2025/10/27/2025-10-27_lessons_on_debt_and_fortune_distribution/</link>
       <guid>https://aidecameron.github.io/2025/10/27/2025-10-27_lessons_on_debt_and_fortune_distribution/</guid>
       <pubDate>Sun, 26 Oct 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>债务和财富分配的危机，从古希腊、罗马，到法国大革命，战后世界屡见不鲜。暴力解决带来短暂痛苦，妥协虽能解决问题，但不能让所有人满意。</description>
       
@@ -94,6 +125,7 @@
       <link>https://aidecameron.github.io/2025/10/23/2025-10-23_intellectuals_with_ai/</link>
       <guid>https://aidecameron.github.io/2025/10/23/2025-10-23_intellectuals_with_ai/</guid>
       <pubDate>Wed, 22 Oct 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>在认知负荷加重的年代，知识分子不要做搬运工，要做知识的主人。</description>
       
@@ -105,9 +137,9 @@
       <category domain="https://aidecameron.github.io/categories/insights/">感悟</category>
       
       
-      <category domain="https://aidecameron.github.io/tags/AI/">人工智能</category>
-      
       <category domain="https://aidecameron.github.io/tags/ai-human/">AI与人</category>
+      
+      <category domain="https://aidecameron.github.io/tags/AI/">人工智能</category>
       
       <category domain="https://aidecameron.github.io/tags/PKM/">知识管理</category>
       
@@ -119,6 +151,7 @@
       <link>https://aidecameron.github.io/2025/10/18/2025-10-18_mencius_and_usa/</link>
       <guid>https://aidecameron.github.io/2025/10/18/2025-10-18_mencius_and_usa/</guid>
       <pubDate>Fri, 17 Oct 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>孟子提倡井田制，大兴桑树种植。中国因而丝绸业发达。丝绸之路把胡椒带到欧洲，贵族形成依赖。奥斯曼帝国阻断贸易，胡椒被卡脖子，因此西欧皇室才出资支持地理大发现。</description>
       
@@ -144,6 +177,7 @@
       <link>https://aidecameron.github.io/2025/10/16/2025-10-16_bagua_relates_to_modern_computer_and_ai/</link>
       <guid>https://aidecameron.github.io/2025/10/16/2025-10-16_bagua_relates_to_modern_computer_and_ai/</guid>
       <pubDate>Wed, 15 Oct 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>伏羲发明八卦，八卦的一个特征是二进制，被莱布尼兹发掘并重视，影响了哥廷根学派冯诺依曼的 EDVAC 设计理念，成为现代计算机重要的数理基础。</description>
       
@@ -169,6 +203,7 @@
       <link>https://aidecameron.github.io/2025/10/13/2025-10-13_what_2025_soai_report_tells_us/</link>
       <guid>https://aidecameron.github.io/2025/10/13/2025-10-13_what_2025_soai_report_tells_us/</guid>
       <pubDate>Sun, 12 Oct 2025 16:00:00 GMT</pubDate>
+      <author>爱的十日谈</author>
       
       <description>2025 年 10 月，Airstreet  Capital 发布了年度 AI 报告。一切看似美好，技术蓬勃发展，越来越多的企业开始采纳 AI。它更加融入人的日常生活。AI 产业链刺激万亿美元规模的投资，加剧了大洋两岸的技术竞赛。但 OpenAI 的创新乏力，以及它和“科技七子”的抱团互动，透露出泡沫破灭的隐忧。</description>
       
@@ -192,6 +227,7 @@
       <link>https://aidecameron.github.io/2025/09/29/2025-09-29_hot_for_real/</link>
       <guid>https://aidecameron.github.io/2025/09/29/2025-09-29_hot_for_real/</guid>
       <pubDate>Sun, 28 Sep 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>流量要回归本质；因为低质，AI 已经成为流量毒药</description>
       
@@ -215,6 +251,7 @@
       <link>https://aidecameron.github.io/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/</link>
       <guid>https://aidecameron.github.io/2025/09/08/2025-09-08_is_chinese_lang_more_efficient_in_llms/</guid>
       <pubDate>Sun, 07 Sep 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>汉字比字母文字更为简洁，分词技术曾经限制了中文的信息密度优势。专家用“错误的论据”得出了“正确的结论”。用中文驱动 DeepSeek 等国产大模型有助于低碳，对 ChatGPT 而言则不然。本文做了量化分析。</description>
       
@@ -238,6 +275,7 @@
       <link>https://aidecameron.github.io/2025/08/29/2025-08-29_vibe_coding_is_a_hifi_thing/</link>
       <guid>https://aidecameron.github.io/2025/08/29/2025-08-29_vibe_coding_is_a_hifi_thing/</guid>
       <pubDate>Thu, 28 Aug 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>谁说 AI 不能拉动经济，氛围编码是烧钱的新火种。Anthropic Vibe Leaderboard 的打榜者向老一代发烧友致敬。</description>
       
@@ -259,6 +297,7 @@
       <link>https://aidecameron.github.io/2025/08/07/2025-08-07_officer_meet_food_deliverer/</link>
       <guid>https://aidecameron.github.io/2025/08/07/2025-08-07_officer_meet_food_deliverer/</guid>
       <pubDate>Wed, 06 Aug 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>这是一个发生在电梯的 2 分钟，打工人虽然为生活奴役，但尚未放弃认知的权力。</description>
       
@@ -282,6 +321,7 @@
       <link>https://aidecameron.github.io/2025/07/29/2025-07-29_1396_gen_ai_casestudy/</link>
       <guid>https://aidecameron.github.io/2025/07/29/2025-07-29_1396_gen_ai_casestudy/</guid>
       <pubDate>Mon, 28 Jul 2025 16:00:00 GMT</pubDate>
+      <author>JayZ</author>
       
       <description>作者对谷歌、微软、OpenAI 公开发布的 1396 个案例进行语义分析。得出结论是：截止 2025 年中，AI 并未广泛提振营收，AI是增效减员利器，AI创造的新业务也并不在传统企业。</description>
       
